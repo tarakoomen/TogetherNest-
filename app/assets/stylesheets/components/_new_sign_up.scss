@@ -1,0 +1,50 @@
+.form-flexbox {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+.two-color-headline {
+  color: $tn-indigo;
+  font-size: 40px;
+  font-family: "Montserrat";
+  font-optical-sizing: auto;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  margin-bottom: 15px;
+
+  .nest-purple {
+    color: $tn-purple;
+  }
+}
+
+.white-form-rounded-lhs {
+  background-color: rgba(250, 244, 215, 0.55);
+  width: 600px;
+  border-radius: 25px;
+  padding: 30px 50px;
+  margin-left: 15vw;
+  margin-bottom: 10vh;
+
+  p {
+    color: $tn-indigo;
+    font-family: "Montserrat";
+    font-optical-sizing: auto;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+
+  }
+}
+
+.tree-bg-signup {
+  background-image: url('tree-signup');
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: top center;
+  position: fixed;
+  top: 0;
+  z-index: -2;
+}

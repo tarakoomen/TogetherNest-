@@ -5,8 +5,8 @@ body {
 }
 
 .flex-hp {
-  margin-left: 8vw;
-  margin-right: 2vw;
+  margin-left: 4vw;
+  margin-right: 1vw;
   margin-top: 2vh;
   display: flex;
   position: relative;
@@ -16,34 +16,33 @@ body {
 #tree-hp {
   position: relative;
   flex: 1;
+  img {
+    position: absolute;
+    bottom: 0;
+    height: 95vh;
+    z-index: -1;
+  }
 }
 
-#tree-hp img {
-  position: absolute;
-  bottom: 0;
-  height: 90vh;
-  z-index: -1;
-}
 
 #birds-logo-hp {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
   flex: 1;
   z-index: -2;
-}
-
-#birds-logo-hp h1 {
-  margin-top: 25vh;
-  margin-right: 8vw;
-  margin-bottom: 0;
-  text-align: right;
-  color: $tn-indigo;
-  font-size: xxx-large;
-  font-family: "Montserrat";
-  font-optical-sizing: auto;
-  font-weight: 300;
-  letter-spacing: 0.1em;
+  h1 {
+    margin-bottom: 0;
+    text-align: right;
+    color: $tn-indigo;
+    font-size: calc(2.75vw + 2vh);
+    font-family: "Montserrat";
+    font-optical-sizing: auto;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+  }
 }
 
 .flex-hp a {
@@ -62,24 +61,45 @@ body {
 
 .nest {
   color: $tn-purple;
-  font-size: xxx-large;
+  font-size: calc(2.8vw + 2vh);
+  letter-spacing: 0.15em;
 }
 
-#birds-logo-hp h2 {
+#birds-logo-hp {
+  .img {
+    width: 50vw;
+  }
+}
+
+#logo-tagline {
   text-align: right;
-  color: white;
-  margin-top: 0;
-  margin-bottom: 5vh;
-  margin-right: 8.3vw;
-  font-size: large;
-  font-family: "Montserrat";
-  font-optical-sizing: auto;
-  font-weight: 300;
-  letter-spacing: 0.1em;
-}
+  margin-right: 4vw;
+  margin-bottom: 20vh;
 
-#birds-logo-hp .img {
-  width: 100%;
+  h2 {
+    color: white;
+    margin-top: 0;
+    margin-right: 10px;
+    margin-bottom: 5vh;
+    font-size: calc(1.6vw);
+    font-family: "Montserrat";
+    font-optical-sizing: auto;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+  }
+
+  p {
+    text-align: right;
+    color: $tn-indigo;
+    margin-top: 1vh;
+    margin-right: 10px;
+    margin-bottom: 0.85vh;
+    font-size: calc(0.6vw + 0.5vh);
+    font-family: "Montserrat";
+    font-optical-sizing: auto;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+  }
 }
 
 /* Below is the background sky that fills the entire page */
@@ -95,6 +115,8 @@ body {
   z-index: -4;
 }
 
+/* Below is the footer only for the home page */
+
 .footer-hp {
   background: url(grass.svg) center top / cover no-repeat;
   height: 9vh;
@@ -104,13 +126,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-}
-
-.footer-hp p {
-  margin: 0;
-  margin-right: 9vw;
-  padding-top: 4vh;
-  color: rgba(255, 255, 255, 0.6);
-  font-family: "Montserrat";
-  font-size: x-small;
+  p {
+    margin: 0;
+    margin-right: 5.4vw;
+    padding-top: 4vh;
+    color: rgba(255, 255, 255, 0.6);
+    font-family: "Montserrat";
+    font-size: calc(.7vw);
+  }
 }
