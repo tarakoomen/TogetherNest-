@@ -1,12 +1,1006 @@
-# This file should ensure the existence of records required to run the application in every environment (production,
-# development, test). The code here should be idempotent so that it can be executed at any point in every environment.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Example:
-#
-#   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
-#     MovieGenre.find_or_create_by!(name: genre_name)
+
+user_bios = [
+  "Coffee enthusiast. Cat lover. Netflix binger.",
+  "Tech geek by day, foodie by night.",
+  "Dreamer, believer, achiever.",
+  "Bookworm. Adventure seeker. Tea addict.",
+  "Music junkie. Pizza aficionado. Outdoor enthusiast.",
+  "Fitness freak. Dog person. DIY enthusiast.",
+  "Art lover. Wanderlust. Coffee snob.",
+  "Fashionista. Food blogger. Beach bum.",
+  "Movie buff. Wine connoisseur. Nature lover.",
+  "Photography enthusiast. Foodie. Travel addict.",
+  "Yoga enthusiast. Animal lover. Mindfulness advocate.",
+  "Gamer. Anime fan. Ramen addict.",
+  "Sports fanatic. BBQ enthusiast. Beer lover.",
+  "Entrepreneur. Fitness enthusiast. Dog parent.",
+  "Minimalist. Environmentalist. Adventure seeker.",
+  "Poetry lover. Coffee addict. Dream chaser.",
+  "Plant mom. Foodie. DIY enthusiast.",
+  "Tech nerd. Music aficionado. Coffee addict.",
+  "Fitness enthusiast. Travel junkie. Food lover.",
+  "Bookworm. Coffee addict. Wanderlust.",
+  "Movie buff. Pizza lover. Cat person.",
+  "Art lover. Nature enthusiast. Coffee addict.",
+  "Fashion lover. Foodie. Traveler.",
+  "Gamer. Anime fan. Pizza enthusiast.",
+  "Sports fanatic. Dog lover. BBQ enthusiast.",
+  "Entrepreneur. Fitness enthusiast. Coffee addict.",
+  "Minimalist. Environmentalist. Adventure lover.",
+  "Poetry enthusiast. Coffee addict. Dreamer.",
+  "Plant lover. Foodie. DIYer.",
+  "Tech geek. Music lover. Coffee enthusiast.",
+  "Fitness addict. Travel lover. Foodie.",
+  "Bookworm. Coffee lover. Wanderer.",
+  "Movie enthusiast. Pizza lover. Cat lover.",
+  "Art enthusiast. Nature lover. Coffee lover.",
+  "Fashionista. Foodie. Traveler.",
+  "Gamer. Anime enthusiast. Pizza lover.",
+  "Sports lover. Dog person. BBQ enthusiast.",
+  "Entrepreneur. Fitness fanatic. Coffee lover.",
+  "Minimalist. Environmentalist. Adventurer.",
+  "Poetry lover. Coffee lover. Dreamer.",
+  "Plant lover. Foodie. DIY enthusiast.",
+  "Tech enthusiast. Music lover. Coffee addict.",
+  "Fitness fanatic. Travel enthusiast. Foodie.",
+  "Bookworm. Coffee addict. Wanderlust.",
+  "Movie buff. Pizza enthusiast. Cat person.",
+  "Art lover. Nature enthusiast. Coffee addict.",
+  "Fashionista. Foodie. Travel junkie.",
+  "Gamer. Anime fan. Ramen lover.",
+  "Sports fan. Dog lover. BBQ aficionado.",
+  "Entrepreneur. Fitness enthusiast. Dog lover.",
+  "Minimalist. Environmentalist. Adventure seeker.",
+  "Poetry lover. Coffee addict. Dreamer.",
+  "Plant mom. Foodie. DIY enthusiast.",
+  "Tech geek. Music aficionado. Coffee lover.",
+  "Fitness enthusiast. Travel junkie. Food lover.",
+  "Bookworm. Coffee addict. Wanderlust.",
+  "Movie buff. Pizza lover. Cat person.",
+  "Art lover. Nature enthusiast. Coffee addict.",
+  "Fashion lover. Foodie. Traveler.",
+  "Gamer. Anime fan. Pizza enthusiast.",
+  "Sports fanatic. Dog lover. BBQ enthusiast.",
+  "Entrepreneur. Fitness enthusiast. Coffee addict.",
+  "Minimalist. Environmentalist. Adventure lover.",
+  "Poetry enthusiast. Coffee addict. Dreamer.",
+  "Plant lover. Foodie. DIYer."
+];
+
+# put all users
+# sydney mentor
+# User.destroy_all
+
+# count = 35
+
+# User.all.each do |user|
+#   user.bio = user_bios[count]
+#   user.save
+#   count += 1
+# end
+
+# require 'httparty'
+# require 'securerandom'
+# require 'faker'
+
+# number_of_users = 25
+
+# # 人物の写真を取得
+# response = HTTParty.get("https://randomuser.me/api/?results=#{number_of_users}&gender=female")
+# users = response['results']
+
+# # seeds.rbファイルにデータを書き込む
+# File.open(Rails.root.join('db', 'seed_test.rb'), 'a') do |file|
+#   file.puts "User.destroy_all\n\n"
+
+#   users.each do |user_data|
+#     # ユーザーデータを作成
+#     email = user_data['email']
+#     password = SecureRandom.hex(8)
+#     first_name = user_data['name']['first']
+#     last_name = user_data['name']['last']
+#     nickname = user_data['login']['username']
+#     personal_details = user_bios[count]
+#     due_date = Date.today + rand(1..365)
+#     post_code = rand(2000..2030)
+#     parent_experience = 0
+#     # is_mentor = true
+#     # joined_mentor_program = true
+#     picture = user_data['picture']['large']
+
+#     count += 1
+
+
+#     # Userを作成
+#     file.puts "user = User.create!("
+#     file.puts "  email: '#{email}',"
+#     file.puts "  password: '#{password}',"
+#     file.puts "  first_name: '#{first_name}',"
+#     file.puts "  last_name: '#{last_name}',"
+#     file.puts "  nickname: '#{nickname}',"
+#     file.puts "  bio: '#{personal_details}',"
+#     file.puts "  due_date: '#{due_date}',"
+#     file.puts "  post_code: '#{post_code}',"
+#     file.puts "  parent_experience: #{parent_experience}"
+#     # file.puts "  is_mentor: #{is_mentor},"
+#     # file.puts "  joined_mentor_program: #{joined_mentor_program}"
+#     file.puts ")"
+
+#     file.puts "file = URI.open('#{picture}')"
+#     file.puts "user.photo.attach(io: file, filename: \"user.png\", content_type: \"image/png\")"
+#     file.puts "user.save"
 #   end
+
+# end
+
+user = User.create!(
+  email: 'minerva.puente@example.com',
+  password: '4591daa44cf24d43',
+  first_name: 'Minerva',
+  last_name: 'Puente',
+  nickname: 'goldenlion888',
+  bio: 'Coffee enthusiast. Cat lover. Netflix binger.',
+  due_date: '2024-09-14',
+  post_code: '2005',
+  parent_experience: 8,
+  is_mentor: true,
+  joined_mentor_program: true
+)
+file = URI.open('https://randomuser.me/api/portraits/women/73.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'vojislava.majstorovic@example.com',
+  password: 'dbd95839d1d82447',
+  first_name: 'Vojislava',
+  last_name: 'Majstorović',
+  nickname: 'purplebear715',
+  bio: 'Tech geek by day, foodie by night.',
+  due_date: '2025-04-06',
+  post_code: '2003',
+  parent_experience: 4,
+  is_mentor: true,
+  joined_mentor_program: true
+)
+file = URI.open('https://randomuser.me/api/portraits/women/39.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'hazel.lawrence@example.com',
+  password: '50b4f895898fd067',
+  first_name: 'Hazel',
+  last_name: 'Lawrence',
+  nickname: 'smallladybug208',
+  bio: 'Dreamer, believer, achiever.',
+  due_date: '2025-03-19',
+  post_code: '2000',
+  parent_experience: 7,
+  is_mentor: true,
+  joined_mentor_program: true
+)
+file = URI.open('https://randomuser.me/api/portraits/women/2.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'bella.stewart@example.com',
+  password: 'f6af2641cd763461',
+  first_name: 'Bella',
+  last_name: 'Stewart',
+  nickname: 'bigtiger457',
+  bio: 'Bookworm. Adventure seeker. Tea addict.',
+  due_date: '2024-05-30',
+  post_code: '2006',
+  parent_experience: 3,
+  is_mentor: true,
+  joined_mentor_program: true
+)
+file = URI.open('https://randomuser.me/api/portraits/women/68.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'thea.rasmussen@example.com',
+  password: '79afdb591bf2f901',
+  first_name: 'Thea',
+  last_name: 'Rasmussen',
+  nickname: 'angrygoose810',
+  bio: 'Music junkie. Pizza aficionado. Outdoor enthusiast.',
+  due_date: '2024-09-22',
+  post_code: '2002',
+  parent_experience: 7,
+  is_mentor: true,
+  joined_mentor_program: true
+)
+file = URI.open('https://randomuser.me/api/portraits/women/41.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+
+# m
+
+user = User.create!(
+  email: 'matilda.tikkanen@example.com',
+  password: '109c9a2ecbf9cb21',
+  first_name: 'Matilda',
+  last_name: 'Tikkanen',
+  nickname: 'lazycat570',
+  bio: 'Fitness freak. Dog person. DIY enthusiast.',
+  due_date: '2024-11-13',
+  post_code: '3002',
+  parent_experience: 3,
+  is_mentor: true,
+  joined_mentor_program: true
+)
+file = URI.open('https://randomuser.me/api/portraits/women/14.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'eva.turner@example.com',
+  password: 'ef825f489f8df504',
+  first_name: 'Eva',
+  last_name: 'Turner',
+  nickname: 'redcat850',
+  bio: 'Art lover. Wanderlust. Coffee snob.',
+  due_date: '2024-10-05',
+  post_code: '3002',
+  parent_experience: 1,
+  is_mentor: true,
+  joined_mentor_program: true
+)
+file = URI.open('https://randomuser.me/api/portraits/women/56.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'sofia.daniels@example.com',
+  password: '9ba41437ff0a9241',
+  first_name: 'Sofia',
+  last_name: 'Daniels',
+  nickname: 'happymeercat934',
+  bio: 'Fashionista. Food blogger. Beach bum.',
+  due_date: '2024-12-31',
+  post_code: '3006',
+  parent_experience: 7,
+  is_mentor: true,
+  joined_mentor_program: true
+)
+file = URI.open('https://randomuser.me/api/portraits/women/46.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'dorle.burkart@example.com',
+  password: '74c68dde9b5cd1a6',
+  first_name: 'Dorle',
+  last_name: 'Burkart',
+  nickname: 'goldendog306',
+  bio: 'Movie buff. Wine connoisseur. Nature lover.',
+  due_date: '2025-03-19',
+  post_code: '3005',
+  parent_experience: 8,
+  is_mentor: true,
+  joined_mentor_program: true
+)
+file = URI.open('https://randomuser.me/api/portraits/women/90.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'zakaria.wopereis@example.com',
+  password: '824a944a6fe16662',
+  first_name: 'Zakaria',
+  last_name: 'Wopereis',
+  nickname: 'redlion274',
+  bio: 'Photography enthusiast. Foodie. Travel addict.',
+  due_date: '2024-07-11',
+  post_code: '3010',
+  parent_experience: 6,
+  is_mentor: true,
+  joined_mentor_program: true
+)
+file = URI.open('https://randomuser.me/api/portraits/women/23.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+
+# n s
+
+user = User.create!(
+  email: 'yolanda.jimenez@example.com',
+  password: '48a50425f9532c6a',
+  first_name: 'Yolanda',
+  last_name: 'Jiménez',
+  nickname: 'redsnake623',
+  bio: 'Yoga enthusiast. Animal lover. Mindfulness advocate.',
+  due_date: '2024-05-22',
+  post_code: '3001',
+  parent_experience: 0
+)
+file = URI.open('https://randomuser.me/api/portraits/women/62.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'virginia.molina@example.com',
+  password: '0be43cf0a7d1fc19',
+  first_name: 'Virginia',
+  last_name: 'Molina',
+  nickname: 'ticklishostrich367',
+  bio: 'Gamer. Anime fan. Ramen addict.',
+  due_date: '2024-09-15',
+  post_code: '3023',
+  parent_experience: 0
+)
+file = URI.open('https://randomuser.me/api/portraits/women/51.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'ulku.ertepinar@example.com',
+  password: '2038bfe1d4be38c3',
+  first_name: 'Ülkü',
+  last_name: 'Ertepınar',
+  nickname: 'heavygorilla217',
+  bio: 'Sports fanatic. BBQ enthusiast. Beer lover.',
+  due_date: '2024-05-27',
+  post_code: '3015',
+  parent_experience: 0
+)
+file = URI.open('https://randomuser.me/api/portraits/women/85.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'hannah.sirko@example.com',
+  password: 'e9fb8b48fa01a35d',
+  first_name: 'Hannah',
+  last_name: 'Sirko',
+  nickname: 'organicswan636',
+  bio: 'Entrepreneur. Fitness enthusiast. Dog parent.',
+  due_date: '2024-07-17',
+  post_code: '3025',
+  parent_experience: 0
+)
+file = URI.open('https://randomuser.me/api/portraits/women/52.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'alexandra.may@example.com',
+  password: '74b4e705e3f4326b',
+  first_name: 'Alexandra',
+  last_name: 'May',
+  nickname: 'orangetiger439',
+  bio: 'Minimalist. Environmentalist. Adventure seeker.',
+  due_date: '2024-05-01',
+  post_code: '3026',
+  parent_experience: 0
+)
+file = URI.open('https://randomuser.me/api/portraits/women/18.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'queenie.fennema@example.com',
+  password: 'fb697332107c80ec',
+  first_name: 'Queenie',
+  last_name: 'Fennema',
+  nickname: 'yellowgorilla839',
+  bio: 'Poetry lover. Coffee addict. Dream chaser.',
+  due_date: '2025-03-27',
+  post_code: '3003',
+  parent_experience: 0
+)
+file = URI.open('https://randomuser.me/api/portraits/women/20.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'consuelo.castro@example.com',
+  password: '563abc4246f656ea',
+  first_name: 'Consuelo',
+  last_name: 'Castro',
+  nickname: 'heavyladybug150',
+  bio: 'Plant mom. Foodie. DIY enthusiast.',
+  due_date: '2025-01-12',
+  post_code: '3009',
+  parent_experience: 0
+)
+file = URI.open('https://randomuser.me/api/portraits/women/51.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'tracy.stephens@example.com',
+  password: '96eb585c46f676fc',
+  first_name: 'Tracy',
+  last_name: 'Stephens',
+  nickname: 'happymeercat494',
+  bio: 'Tech nerd. Music aficionado. Coffee addict.',
+  due_date: '2024-10-28',
+  post_code: '3013',
+  parent_experience: 0
+)
+file = URI.open('https://randomuser.me/api/portraits/women/41.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'elisa.marquez@example.com',
+  password: '45fe82c0cb125427',
+  first_name: 'Elisa',
+  last_name: 'Márquez',
+  nickname: 'ticklishzebra196',
+  bio: 'Fitness enthusiast. Travel junkie. Food lover.',
+  due_date: '2024-07-18',
+  post_code: '3014',
+  parent_experience: 0
+)
+file = URI.open('https://randomuser.me/api/portraits/women/95.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'sofia.shaw@example.com',
+  password: '668afa08aa5b06ff',
+  first_name: 'Sofia',
+  last_name: 'Shaw',
+  nickname: 'crazypanda479',
+  bio: 'Bookworm. Coffee addict. Wanderlust.',
+  due_date: '2024-04-28',
+  post_code: '3019',
+  parent_experience: 0
+)
+file = URI.open('https://randomuser.me/api/portraits/women/22.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'rebecca.hestetun@example.com',
+  password: '491f6cd113aa450c',
+  first_name: 'Rebecca',
+  last_name: 'Hestetun',
+  nickname: 'beautifulkoala469',
+  bio: 'Movie buff. Pizza lover. Cat person.',
+  due_date: '2024-09-28',
+  post_code: '3020',
+  parent_experience: 0
+)
+file = URI.open('https://randomuser.me/api/portraits/women/94.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'sarah.clarke@example.com',
+  password: 'f41fe3745f653847',
+  first_name: 'Sarah',
+  last_name: 'Clarke',
+  nickname: 'sadbird550',
+  bio: 'Art lover. Nature enthusiast. Coffee addict.',
+  due_date: '2024-07-11',
+  post_code: '3021',
+  parent_experience: 0
+)
+file = URI.open('https://randomuser.me/api/portraits/women/36.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'anzhelika.gaydamaha@example.com',
+  password: '8e6de28d04cada39',
+  first_name: 'Anzhelika',
+  last_name: 'Gaydamaha',
+  nickname: 'goldendog902',
+  bio: 'Fashion lover. Foodie. Traveler.',
+  due_date: '2025-01-07',
+  post_code: '3012',
+  parent_experience: 0
+)
+file = URI.open('https://randomuser.me/api/portraits/women/48.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'amy.sollid@example.com',
+  password: 'a9ccccec77a3ff4d',
+  first_name: 'Amy',
+  last_name: 'Sollid',
+  nickname: 'organicmeercat223',
+  bio: 'Gamer. Anime fan. Pizza enthusiast.',
+  due_date: '2024-10-06',
+  post_code: '3000',
+  parent_experience: 0
+)
+file = URI.open('https://randomuser.me/api/portraits/women/6.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'byt.glshn@example.com',
+  password: '8c6d0352a3919c04',
+  first_name: 'بیتا',
+  last_name: 'گلشن',
+  nickname: 'sadfish552',
+  bio: 'Sports fanatic. Dog lover. BBQ enthusiast.',
+  due_date: '2024-08-28',
+  post_code: '3020',
+  parent_experience: 0
+)
+file = URI.open('https://randomuser.me/api/portraits/women/44.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'catherine.renard@example.com',
+  password: 'ef9936d3e0f4d8a3',
+  first_name: 'Catherine',
+  last_name: 'Renard',
+  nickname: 'bluebear577',
+  bio: 'Entrepreneur. Fitness enthusiast. Coffee addict.',
+  due_date: '2024-12-21',
+  post_code: '3001',
+  parent_experience: 0
+)
+file = URI.open('https://randomuser.me/api/portraits/women/50.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'larisa.monsma@example.com',
+  password: '33958bd7e9307550',
+  first_name: 'Larisa',
+  last_name: 'Monsma',
+  nickname: 'purpleelephant768',
+  bio: 'Minimalist. Environmentalist. Adventure lover.',
+  due_date: '2024-06-06',
+  post_code: '3010',
+  parent_experience: 0
+)
+file = URI.open('https://randomuser.me/api/portraits/women/29.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'mariaelena.gallegos@example.com',
+  password: '37fc3c6e92fb6837',
+  first_name: 'María Elena',
+  last_name: 'Gallegos',
+  nickname: 'beautifulelephant172',
+  bio: 'Poetry enthusiast. Coffee addict. Dreamer.',
+  due_date: '2024-09-18',
+  post_code: '3022',
+  parent_experience: 0
+)
+file = URI.open('https://randomuser.me/api/portraits/women/69.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'zilena.dacruz@example.com',
+  password: 'b97504886de7b2d4',
+  first_name: 'Zilena',
+  last_name: 'da Cruz',
+  nickname: 'orangerabbit810',
+  bio: 'Plant lover. Foodie. DIYer.',
+  due_date: '2024-06-15',
+  post_code: '3007',
+  parent_experience: 0
+)
+file = URI.open('https://randomuser.me/api/portraits/women/83.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'ruby.galvan@example.com',
+  password: '3279f8c8fea99439',
+  first_name: 'Ruby',
+  last_name: 'Galván',
+  nickname: 'bigzebra597',
+  bio: 'Tech geek. Music lover. Coffee enthusiast.',
+  due_date: '2024-06-25',
+  post_code: '3021',
+  parent_experience: 0
+)
+file = URI.open('https://randomuser.me/api/portraits/women/34.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'dragica.dasilva@example.com',
+  password: '07cfc04038c85617',
+  first_name: 'Dragica',
+  last_name: 'Da Silva',
+  nickname: 'heavymeercat375',
+  bio: 'Fitness addict. Travel lover. Foodie.',
+  due_date: '2024-09-07',
+  post_code: '3016',
+  parent_experience: 0
+)
+file = URI.open('https://randomuser.me/api/portraits/women/3.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'ftmhzhr.zraay@example.com',
+  password: '841f9017332bda39',
+  first_name: 'فاطمه زهرا',
+  last_name: 'زارعی',
+  nickname: 'orangedog862',
+  bio: 'Bookworm. Coffee lover. Wanderer.',
+  due_date: '2025-01-01',
+  post_code: '3028',
+  parent_experience: 0
+)
+file = URI.open('https://randomuser.me/api/portraits/women/51.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'olivia.cote@example.com',
+  password: 'f3fdb9a10de13258',
+  first_name: 'Olivia',
+  last_name: 'Côté',
+  nickname: 'lazyostrich817',
+  bio: 'Movie enthusiast. Pizza lover. Cat lover.',
+  due_date: '2024-08-24',
+  post_code: '3027',
+  parent_experience: 0
+)
+file = URI.open('https://randomuser.me/api/portraits/women/75.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'vanessa.schmitt@example.com',
+  password: 'd3bb4edb0c5aa475',
+  first_name: 'Vanessa',
+  last_name: 'Schmitt',
+  nickname: 'beautifulbutterfly436',
+  bio: 'Art enthusiast. Nature lover. Coffee lover.',
+  due_date: '2024-07-29',
+  post_code: '3000',
+  parent_experience: 0
+)
+file = URI.open('https://randomuser.me/api/portraits/women/60.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'amy.gauthier@example.com',
+  password: '61cb5ec513e6ab31',
+  first_name: 'Amy',
+  last_name: 'Gauthier',
+  nickname: 'purplelion742',
+  bio: 'Fashionista. Foodie. Traveler.',
+  due_date: '2024-06-04',
+  post_code: '3006',
+  parent_experience: 0
+)
+file = URI.open('https://randomuser.me/api/portraits/women/26.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+
+user = User.create!(
+  email: 'noelia.leroux@example.com',
+  password: 'd8fe78ef109fa558',
+  first_name: 'Noelia',
+  last_name: 'Leroux',
+  nickname: 'blackbird636',
+  bio: 'Gamer. Anime enthusiast. Pizza lover.',
+  due_date: '2025-01-01',
+  post_code: '2018',
+  parent_experience: 0
+)
+file = URI.open('https://randomuser.me/api/portraits/women/73.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'lesa.horton@example.com',
+  password: '10d8e3a290f6153a',
+  first_name: 'Lesa',
+  last_name: 'Horton',
+  nickname: 'yellowcat795',
+  bio: 'Sports lover. Dog person. BBQ enthusiast.',
+  due_date: '2024-07-11',
+  post_code: '2022',
+  parent_experience: 0
+)
+file = URI.open('https://randomuser.me/api/portraits/women/83.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'khymy.rdyy@example.com',
+  password: 'e8f55feea0ec29f3',
+  first_name: 'کیمیا',
+  last_name: 'رضایی',
+  nickname: 'happyzebra524',
+  bio: 'Entrepreneur. Fitness fanatic. Coffee lover.',
+  due_date: '2024-10-10',
+  post_code: '2003',
+  parent_experience: 0
+)
+file = URI.open('https://randomuser.me/api/portraits/women/44.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'anita.almeida@example.com',
+  password: 'b841d3309ede507f',
+  first_name: 'Anita',
+  last_name: 'Almeida',
+  nickname: 'tinykoala483',
+  bio: 'Minimalist. Environmentalist. Adventurer.',
+  due_date: '2024-05-05',
+  post_code: '2011',
+  parent_experience: 0
+)
+file = URI.open('https://randomuser.me/api/portraits/women/41.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'viviana.daconceicao@example.com',
+  password: 'ba024f647b644374',
+  first_name: 'Viviana',
+  last_name: 'da Conceição',
+  nickname: 'whitegoose169',
+  bio: 'Poetry lover. Coffee lover. Dreamer.',
+  due_date: '2024-05-04',
+  post_code: '2004',
+  parent_experience: 0
+)
+file = URI.open('https://randomuser.me/api/portraits/women/5.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'alexis.ma@example.com',
+  password: '4463ad3174027afb',
+  first_name: 'Alexis',
+  last_name: 'Ma',
+  nickname: 'smallelephant849',
+  bio: 'Plant lover. Foodie. DIY enthusiast.',
+  due_date: '2024-06-24',
+  post_code: '2017',
+  parent_experience: 0
+)
+file = URI.open('https://randomuser.me/api/portraits/women/80.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'celin.selvik@example.com',
+  password: '857f5e437ea074ca',
+  first_name: 'Celin',
+  last_name: 'Selvik',
+  nickname: 'blackpeacock299',
+  bio: 'Tech enthusiast. Music lover. Coffee addict.',
+  due_date: '2024-05-17',
+  post_code: '2004',
+  parent_experience: 0
+)
+file = URI.open('https://randomuser.me/api/portraits/women/3.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'yld.slry@example.com',
+  password: 'd68e305505acb1dc',
+  first_name: 'یلدا',
+  last_name: 'سالاری',
+  nickname: 'organicwolf606',
+  bio: 'Fitness fanatic. Travel enthusiast. Foodie.',
+  due_date: '2024-09-11',
+  post_code: '2000',
+  parent_experience: 0
+)
+file = URI.open('https://randomuser.me/api/portraits/women/2.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'savannah.taylor@example.com',
+  password: '922f86aafe73b4be',
+  first_name: 'Savannah',
+  last_name: 'Taylor',
+  nickname: 'organiclion848',
+  bio: 'Bookworm. Coffee addict. Wanderlust.',
+  due_date: '2025-02-21',
+  post_code: '2030',
+  parent_experience: 0
+)
+file = URI.open('https://randomuser.me/api/portraits/women/61.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'kubra.arslanoglu@example.com',
+  password: '7d0e36d6c517067b',
+  first_name: 'Kübra',
+  last_name: 'Arslanoğlu',
+  nickname: 'sadduck588',
+  bio: 'Movie buff. Pizza enthusiast. Cat person.',
+  due_date: '2024-12-25',
+  post_code: '2001',
+  parent_experience: 0
+)
+file = URI.open('https://randomuser.me/api/portraits/women/1.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'andrea.christensen@example.com',
+  password: '938ff3a805562c0c',
+  first_name: 'Andrea',
+  last_name: 'Christensen',
+  nickname: 'beautifulmouse905',
+  bio: 'Art lover. Nature enthusiast. Coffee addict.',
+  due_date: '2025-01-06',
+  post_code: '2004',
+  parent_experience: 0
+)
+file = URI.open('https://randomuser.me/api/portraits/women/17.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'emilie.christiansen@example.com',
+  password: '617ae3f59511f8c2',
+  first_name: 'Emilie',
+  last_name: 'Christiansen',
+  nickname: 'blueswan783',
+  bio: 'Fashionista. Foodie. Travel junkie.',
+  due_date: '2025-01-12',
+  post_code: '2029',
+  parent_experience: 0
+)
+file = URI.open('https://randomuser.me/api/portraits/women/94.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'geerte.koks@example.com',
+  password: 'bd765340dcba7784',
+  first_name: 'Geerte',
+  last_name: 'Koks',
+  nickname: 'crazybear204',
+  bio: 'Gamer. Anime fan. Ramen lover.',
+  due_date: '2025-01-13',
+  post_code: '2017',
+  parent_experience: 0
+)
+file = URI.open('https://randomuser.me/api/portraits/women/91.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'jill.fisher@example.com',
+  password: 'efe3eafd8341c5c2',
+  first_name: 'Jill',
+  last_name: 'Fisher',
+  nickname: 'heavyswan642',
+  bio: 'Sports fan. Dog lover. BBQ aficionado.',
+  due_date: '2024-12-08',
+  post_code: '2003',
+  parent_experience: 0
+)
+file = URI.open('https://randomuser.me/api/portraits/women/42.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'marilene.nogueira@example.com',
+  password: '54bd8cd9a8a1d3c1',
+  first_name: 'Marilene',
+  last_name: 'Nogueira',
+  nickname: 'silverlion181',
+  bio: 'Entrepreneur. Fitness enthusiast. Dog lover.',
+  due_date: '2025-01-07',
+  post_code: '2012',
+  parent_experience: 0
+)
+file = URI.open('https://randomuser.me/api/portraits/women/82.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'martha.carrasco@example.com',
+  password: '2cb1aa88e028065e',
+  first_name: 'Martha',
+  last_name: 'Carrasco',
+  nickname: 'blackostrich621',
+  bio: 'Minimalist. Environmentalist. Adventure seeker.',
+  due_date: '2024-10-22',
+  post_code: '2019',
+  parent_experience: 0
+)
+file = URI.open('https://randomuser.me/api/portraits/women/79.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'summer.martin@example.com',
+  password: '6fd28af8def7191e',
+  first_name: 'Summer',
+  last_name: 'Martin',
+  nickname: 'ticklishostrich743',
+  bio: 'Poetry lover. Coffee addict. Dreamer.',
+  due_date: '2024-09-07',
+  post_code: '2026',
+  parent_experience: 0
+)
+file = URI.open('https://randomuser.me/api/portraits/women/52.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'cathy.howell@example.com',
+  password: 'ab1c2fe3b8750988',
+  first_name: 'Cathy',
+  last_name: 'Howell',
+  nickname: 'smalldog670',
+  bio: 'Plant mom. Foodie. DIY enthusiast.',
+  due_date: '2024-06-12',
+  post_code: '2012',
+  parent_experience: 0
+)
+file = URI.open('https://randomuser.me/api/portraits/women/69.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'deborah.ellis@example.com',
+  password: '4c239a336d3865ea',
+  first_name: 'Deborah',
+  last_name: 'Ellis',
+  nickname: 'whitemouse215',
+  bio: 'Tech geek. Music aficionado. Coffee lover.',
+  due_date: '2024-12-13',
+  post_code: '2012',
+  parent_experience: 0
+)
+file = URI.open('https://randomuser.me/api/portraits/women/13.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'sedef.yildirim@example.com',
+  password: '18ccdaba1d5cbcc2',
+  first_name: 'Sedef',
+  last_name: 'Yıldırım',
+  nickname: 'sadostrich959',
+  bio: 'Fitness enthusiast. Travel junkie. Food lover.',
+  due_date: '2024-09-04',
+  post_code: '2022',
+  parent_experience: 0
+)
+file = URI.open('https://randomuser.me/api/portraits/women/14.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'mercia.dacruz@example.com',
+  password: 'f806e297b88dde33',
+  first_name: 'Mércia',
+  last_name: 'da Cruz',
+  nickname: 'orangedog185',
+  bio: 'Bookworm. Coffee addict. Wanderlust.',
+  due_date: '2025-04-27',
+  post_code: '2007',
+  parent_experience: 0
+)
+file = URI.open('https://randomuser.me/api/portraits/women/42.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'lana.dasilva@example.com',
+  password: 'd5dbacbcbe0b4e60',
+  first_name: 'Lana',
+  last_name: 'Da Silva',
+  nickname: 'beautifulduck998',
+  bio: 'Movie buff. Pizza lover. Cat person.',
+  due_date: '2024-09-23',
+  post_code: '2023',
+  parent_experience: 0
+)
+file = URI.open('https://randomuser.me/api/portraits/women/88.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'ida.ramsoy@example.com',
+  password: '29c15f54afc130a2',
+  first_name: 'Ida',
+  last_name: 'Ramsøy',
+  nickname: 'organicbutterfly786',
+  bio: 'Art lover. Nature enthusiast. Coffee addict.',
+  due_date: '2024-11-06',
+  post_code: '2000',
+  parent_experience: 0
+)
+file = URI.open('https://randomuser.me/api/portraits/women/62.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'carolina.luhrs@example.com',
+  password: '909c33b6296facac',
+  first_name: 'Carolina',
+  last_name: 'Lührs',
+  nickname: 'heavycat911',
+  bio: 'Fashion lover. Foodie. Traveler.',
+  due_date: '2024-08-30',
+  post_code: '2030',
+  parent_experience: 0
+)
+file = URI.open('https://randomuser.me/api/portraits/women/19.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+user = User.create!(
+  email: 'concepcion.collazo@example.com',
+  password: '83f9fd1226ca804a',
+  first_name: 'Concepción',
+  last_name: 'Collazo',
+  nickname: 'silverzebra740',
+  bio: 'Gamer. Anime fan. Pizza enthusiast.',
+  due_date: '2025-01-20',
+  post_code: '2000',
+  parent_experience: 0
+)
+file = URI.open('https://randomuser.me/api/portraits/women/87.jpg')
+user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
+user.save
+
 
 # Parent Community Groups
 
@@ -23,3 +1017,4 @@ Group.create(name: 'Lola and Mike chat', group_type: 'private messaging')
 
 Group.create(name: 'Paul and Jack mentor group', group_type: 'mentor')
 Group.create(name: 'Lisa and Mike mentor group', group_type: 'mentor')
+
