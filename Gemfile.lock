@@ -131,6 +131,7 @@ GEM
     error_highlight (0.6.0)
     erubi (1.12.0)
     execjs (2.9.1)
+<<<<<<< Updated upstream
     faraday (2.9.0)
       faraday-net_http (>= 2.0, < 3.2)
     faraday-follow_redirects (0.3.0)
@@ -139,11 +140,18 @@ GEM
       multipart-post (~> 2)
     faraday-net_http (3.1.0)
       net-http
+=======
+    faker (3.3.1)
+      i18n (>= 1.8.11, < 2)
+>>>>>>> Stashed changes
     ffi (1.16.3)
     font-awesome-sass (6.5.2)
       sassc (~> 2.0)
     globalid (1.2.1)
       activesupport (>= 6.1)
+    httparty (0.21.0)
+      mini_mime (>= 1.0.0)
+      multi_xml (>= 0.5.2)
     i18n (1.14.4)
       concurrent-ruby (~> 1.0)
     importmap-rails (2.0.1)
@@ -170,7 +178,11 @@ GEM
     mini_mime (1.1.5)
     minitest (5.22.3)
     msgpack (1.7.2)
+<<<<<<< Updated upstream
     multipart-post (2.4.0)
+=======
+    multi_xml (0.6.0)
+>>>>>>> Stashed changes
     mutex_m (0.2.0)
     net-http (0.4.1)
       uri
@@ -196,6 +208,10 @@ GEM
       racc (~> 1.4)
     nokogiri (1.16.4-x86_64-linux)
       racc (~> 1.4)
+    open-uri (0.4.1)
+      stringio
+      time
+      uri
     orm_adapter (0.5.0)
     pg (1.5.6)
     popper_js (2.11.8)
@@ -282,6 +298,8 @@ GEM
     stringio (3.1.0)
     thor (1.3.1)
     tilt (2.3.0)
+    time (0.3.0)
+      date
     timeout (0.4.1)
     turbo-rails (2.0.5)
       actionpack (>= 6.0.0)
@@ -324,9 +342,12 @@ DEPENDENCIES
   devise
   dotenv-rails
   error_highlight (>= 0.4.0)
+  faker
   font-awesome-sass (~> 6.1)
+  httparty
   importmap-rails
   jbuilder
+  open-uri
   pg (~> 1.1)
   puma (>= 5.0)
   rails (~> 7.1.3, >= 7.1.3.2)
