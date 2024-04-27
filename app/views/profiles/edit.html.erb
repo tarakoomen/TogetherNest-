@@ -1,24 +1,31 @@
-<h2>aboutyou</h2>
-<p>Whether you're a new parent seeking advice or an experienced caregiver looking to share your wisdom, our platform offers the perfect space to learn, grow, and thrive together. Tell us just a little bit more about yourself so that we cann best match you to a commmunity.</p>
-<%= simple_form_for(current_user, as: :user, url: profile_path, html: { method: :patch }) do |f| %>
-  <%= f.error_notification %>
+<div class="form-flexbox-rhs">
+  <div class="white-form-rounded">
+    <h2 class="two-color-headline">about<span class="nest-purple">you</span></h2>
+    <p>To ensure we place you in the perfect environment for learning and flourishing together, please share a bit more about yourself below. Your answers will enable us to match you seamlessly with your ideal community.</p>
+    <%= simple_form_for(current_user, as: :user, url: profile_path, html: { method: :patch }) do |f| %>
+      <%= f.error_notification %>
 
-  <div class="form-inputs">
+      <div class="form-inputs">
 
-    <%= f.input :due_date,
-                required: true,
-                input_html: { autocomplete: "due date" } %>
-    <%= f.input :post_code,
-                required: true,
-                input_html: { autocomplete: "postcode" } %>
-    <%= f.input :bio,
-              required: true,
-              input_html: { autocomplete: "short bio to introduce yourself" } %>
+        <%= f.input :due_date,
+                    required: true,
+                    input_html: { autocomplete: "due date" } %>
+        <%= f.input :post_code,
+                    required: true,
+                    input_html: { autocomplete: "postcode" } %>
+        <%= f.input :bio,
+                  required: true,
+                  input_html: { autocomplete: "short bio to introduce yourself" } %>
+      </div>
+
+      <div class="form-actions">
+        <%= f.button :submit, "Continue" %>
+      </div>
+    <% end %>
+
+    <%= link_to "Back", :back %>
   </div>
+</div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "Continue" %>
-  </div>
-<% end %>
-
-<%= link_to "Back", :back %>
+<div class="tree-bg-user-edit">
+</div>

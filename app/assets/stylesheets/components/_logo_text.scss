@@ -1,0 +1,20 @@
+.two-color-headline {
+  color: $tn-indigo;
+  font-size: 40px;
+  font-family: "Montserrat";
+  font-optical-sizing: auto;
+  font-weight: 300;
+  letter-spacing: 0.15em;
+  margin-bottom: 15px;
+
+  .nest-purple {
+    color: $tn-purple;
+    font-size: 40px;
+    font-family: "Montserrat";
+    font-optical-sizing: auto;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    margin-bottom: 15px;
+    margin-left: 2px;
+  }
+}
