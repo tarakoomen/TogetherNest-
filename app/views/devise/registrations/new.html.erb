@@ -1,16 +1,26 @@
 <div class="form-flexbox">
   <div class="white-form-rounded-lhs">
   <h2 class="two-color-headline">sign<span class="nest-purple">up</span></h2>
-  <p>Whether you're a new parent seeking advice or an experienced caregiver looking to share your wisdom, our platform offers the perfect space to learn, grow, and thrive together. Simply fill out the form below to get started on your journey towards support, guidance, and meaningful connections. We can't wait to welcome into the togethernest.</p>
+  <p>Simply fill out the form below to get started on your journey towards support, guidance, and meaningful connections. We look forward to welcoming you into the the nest.</p>
 
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= f.error_notification %>
 
     <div class="form-inputs">
+      <%= f.input :first_name,
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "given-name" } %>
+      <%= f.input :last_name,
+                  required: true,
+                  autofocus: true,
+                  input_html: { autocomplete: "family-name" } %>
+      <%= f.input :nickname,
+                  input_html: { autocomplete: "nickname" } %>
       <%= f.input :email,
                   required: true,
                   autofocus: true,
-                  input_html: { autocomplete: "email" }%>
+                  input_html: { autocomplete: "email" } %>
       <%= f.input :password,
                   required: true,
                   hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
