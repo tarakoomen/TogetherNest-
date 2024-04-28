@@ -1,0 +1,21 @@
+.tree-bg-signup {
+  background-image: url('tree-signup');
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: top center;
+  position: fixed;
+  top: 0;
+  z-index: -2;
+}
+
+.tree-bg-user-edit {
+  background-image: url('tree-user-edit.svg');
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+  position: fixed;
+  top: 0;
+  z-index: -4;
+}

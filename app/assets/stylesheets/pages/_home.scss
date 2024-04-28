@@ -43,6 +43,11 @@ body {
     font-weight: 300;
     letter-spacing: 0.15em;
   }
+  .nest {
+    color: $tn-purple;
+    font-size: calc(2.8vw + 2vh);
+    letter-spacing: 0.15em;
+  }
 }
 
 .flex-hp a {
@@ -59,11 +64,6 @@ body {
   text-shadow: 0 0 10px white;
 }
 
-.nest {
-  color: $tn-purple;
-  font-size: calc(2.8vw + 2vh);
-  letter-spacing: 0.15em;
-}
 
 #birds-logo-hp {
   .img {
