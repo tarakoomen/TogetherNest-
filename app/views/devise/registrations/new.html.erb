@@ -1,7 +1,7 @@
 <div class="form-flexbox-lhs">
   <div class="white-form-rounded">
   <h2 class="two-color-headline">sign<span class="nest-purple">up</span></h2>
-  <p>Simply fill out the form below to get started on your journey towards support, guidance, and meaningful connections. We look forward to welcoming you into the the nest.</p>
+  <p>Fill in the form to begin your journey towards support and meaningful connections. We look forward to welcoming you into the nest.</p>
 
   <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= f.error_notification %>
@@ -32,11 +32,11 @@
     </div>
 
     <div class="form-actions">
-      <%= f.button :submit, "Sign up" %>
+      <%= f.button :submit, "continue" %>
     </div>
   <% end %>
 
-    <p>Already have an account? Sign in <a href="#">here</a></p>
+    <p>Already have an account? Sign in <%= link_to "here", new_user_session_path %></p>
   </div>
 </div>
 <div class="tree-bg-signup">
