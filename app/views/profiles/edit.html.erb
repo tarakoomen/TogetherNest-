@@ -9,7 +9,8 @@
 
         <%= f.input :due_date,
                     required: true,
-                    input_html: { autocomplete: "due date" } %>
+                    as: :string,
+                    input_html: { autocomplete: "due date", data: { controller: "datepicker" } }  %>
         <%= f.input :post_code,
                     required: true,
                     input_html: { autocomplete: "postcode" } %>
