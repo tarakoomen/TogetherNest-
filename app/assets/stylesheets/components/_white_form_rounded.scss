@@ -4,8 +4,7 @@
   border-radius: 25px;
   padding: 30px 50px;
   margin-bottom: 10vh;
-
-  transform: scale(0.75); /* Matt - check if size works across all */
+  transform: scale(0.75);
 
   p {
     color: $tn-indigo;
@@ -30,7 +29,7 @@
     letter-spacing: 3px;
     padding: 12px 30px;
     margin-top: 9px;
-    margin-bottom: 22px;
+    margin-bottom: 28px;
     border-radius: 13px;
     border-width: 1px;
     border-color: rgba(221, 221, 221, 0.693);
@@ -65,7 +64,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
-  padding-right: 15vw;
+  margin-right: 15vw;
 }
 
 

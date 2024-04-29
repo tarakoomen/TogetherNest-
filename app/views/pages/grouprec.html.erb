@@ -1,0 +1,39 @@
+<div class="form-flexbox-rhs">
+  <div class="half-page">
+    <h2 class="two-color-sentence">Welcome to the <span class="nest-purple">nest</span></h2>
+    <p>We are excited to welcome you to a close-knit community group of parents just like you. This group placement was carefully calculated based on criteria such as your location and the due date / birth date of your little one, ensuring you are connected with parents who can understand and relate to the journey you are on.</p>
+
+    <div style="display: flex; align-items: center;">
+      <div class="grouped-avatar-container">
+        <%= image_tag asset_path("parent1.jpg"), class: "tn-avatar" %>
+        <%= image_tag asset_path("parent1.jpg"), class: "tn-avatar" %>
+        <%= image_tag asset_path("parent1.jpg"), class: "tn-avatar" %>
+        <%= image_tag asset_path("parent1.jpg"), class: "tn-avatar" %>
+        <%= image_tag asset_path("parent1.jpg"), class: "tn-avatar" %>
+        <%= image_tag asset_path("parent1.jpg"), class: "tn-avatar" %>
+        <%= image_tag asset_path("parent1.jpg"), class: "tn-avatar" %>
+        <%= image_tag asset_path("parent1.jpg"), class: "tn-avatar" %>
+        <%= image_tag asset_path("parent1.jpg"), class: "tn-avatar" %>
+        <%= image_tag asset_path("parent1.jpg"), class: "tn-avatar" %>
+        <%= image_tag asset_path("parent1.jpg"), class: "tn-avatar" %>
+        <%= image_tag asset_path("parent1.jpg"), class: "tn-avatar" %>
+        <%= image_tag asset_path("parent1.jpg"), class: "tn-avatar" %>
+        <%= image_tag asset_path("parent1.jpg"), class: "tn-avatar" %>
+      </div>
+      <h1 id="plus">+</h1>
+      <div class="new-parent-container">
+        <%= cl_image_tag current_user.photo.key, class: "tn-avatar-lg avatar" %>
+      </div>
+    </div>
+
+    <p>You'll find a warm and supportive space where you can share advice, moral support, and laughter.</p>
+    <p>Continue below to join the recommended community group.</p>
+    <div class="btn-hp">
+      <%= link_to "join", root_path %>
+    </div>
+    <p>Not so keen? Click <%= link_to "here", root_path %></p>
+  </div>
+</div>
+
+<div class="tree-bg-group-rec">
+</div>
