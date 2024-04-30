@@ -7,4 +7,7 @@ class PagesController < ApplicationController
   def grouprec   # Matt's temporary page
   end
 
+  def mentor_info
+
+  end
 end
