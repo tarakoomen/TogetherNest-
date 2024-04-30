@@ -7,7 +7,8 @@ class MessagesController < ApplicationController
     @message.save
     GroupChannel.broadcast_to(
       @group,
-      render_to_string(partial: "messages/message", locals: { message: @message })
+      message: render_to_string(partial: "message", locals: { message: @message }),
+      sender_id: @message.user.id
     )
     head :ok
   end

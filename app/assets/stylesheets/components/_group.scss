@@ -1,16 +1,25 @@
 .group {
-  background: white;
+  background-color: rgba(250, 244, 215, 0.55);
   margin-top: 9px;
-  height: calc(100vh - 75px);
+  height: calc(100vh - 150px);
+  max-width: 50%;
+  margin-left: 75px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   flex-grow: 1;
+  border-radius: 25px;
+  transform: scale(0.75);
 
   h1 {
-    border-bottom: 1px solid $gray-200;
     margin-bottom: 0;
-    padding: 1rem;
+    text-align: left;
+    color: $tn-indigo;
+    font-size: 42px;
+    font-family: "Montserrat";
+    font-optical-sizing: auto;
+    font-weight: 300;
+    letter-spacing: 0.15em;
   }
 
   .messages {
@@ -26,5 +35,40 @@
     .form-group {
       margin-bottom: 0;
     }
+  }
+
+
+p {
+  color: $tn-indigo;
+  font-family: "Montserrat";
+  font-optical-sizing: auto;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+}
+
+  .btn {
+    color: $tn-purple;
+    background-color: rgba(255, 255, 255, 0.75);
+    font-family: "Montserrat", sans-serif;
+    font-size: x-large;
+    font-weight: 300;
+    letter-spacing: 3px;
+    padding: 12px 30px;
+    margin-left: 9px;
+    border-radius: 13px;
+    border-width: 1px;
+    border-color: rgba(221, 221, 221, 0.693);
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.5s ease, padding 0.5s ease, font-weight 0.5s ease, border-color 0.5s ease, border-radius 0.5s ease;
+  }
+
+  .btn:hover {
+    background-color: rgba(255, 255, 255, 1);
+    font-weight: 400;
+    text-shadow: 1px 1px 4px rgba(206, 153, 250, 0.55);
+    border-width: 1px;
+    border-color: $tn-purple;
+    border-radius: 20px;
   }
 }
