@@ -1,8 +1,16 @@
 <div id="message-<%= message.id %>">
   <small>
+    <%= cl_image_tag message.user.photo.key, class: "avatar-small", alt: "user photo" %>
     <strong><%= message.user.nickname %></strong>
     <i><%= message.created_at.strftime("%a %b %e at %l:%M %p") %></i>
   </small>
   <p><%= message.content %></p>
-  <%# <%= cl_image_tag @message.user.photo.key, height: 300, width: 400, crop: :fill %>
 </div>
+
+<% @group.messages.each do |message| %>
+  <div class="message-row d-flex <%= message.sender?(current_user) ? 'justify-content-end' : 'justify-content-start' %>">
+    <div class="<%= message.sender?(current_user) ? 'sender-style' : 'receiver-style' %>">
+      <%= render "messages/message", message: message %>
+    </div>
+  </div>
+<% end %>
