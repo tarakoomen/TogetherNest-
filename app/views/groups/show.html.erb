@@ -25,7 +25,7 @@
 
 <% elsif @group_type == "mentor" %>
   <div class="container group" data-controller="group-subscription" data-group-subscription-group-id-value="<%= @group.id %>">
-    <h1>#<%= @group.name %></h1>
+    <h1><%= @group.name %></h1>
 
     <div class="messages" data-group-subscription-target="messages">
       <% @group.messages.each do |message| %>
