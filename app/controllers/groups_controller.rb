@@ -7,11 +7,11 @@ class GroupsController < ApplicationController
     # @group_post_code = @group.post_code
   end
 
-  def new
-  end
+  # def new
+  # end
 
-  def create
-  end
+  # def create
+  # end
 
   def show
     @group = Group.find(params[:id])
