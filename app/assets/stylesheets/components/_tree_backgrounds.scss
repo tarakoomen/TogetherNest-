@@ -19,3 +19,14 @@
   top: 0;
   z-index: -4;
 }
+
+.tree-bg-group-rec {
+  background-image: url('tree-group-rec.svg');
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: center center;
+  position: fixed;
+  top: 0;
+  z-index: -4;
+}

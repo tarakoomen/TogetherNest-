@@ -18,3 +18,35 @@
   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
   border: white 1px solid;
 }
+
+// TNest avatars below. The above avatars were auto generated
+
+.grouped-avatar-container {
+  width: 375px;
+  margin-top: 18px;
+  margin-bottom: 18px;
+
+  .tn-avatar {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: white 4px solid;
+    margin-right: 14px;
+    margin-bottom: 14px;
+  }
+}
+
+.tn-avatar-lg {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: white 4px solid;
+  margin-bottom: 10px;
+}
+
+.new-parent-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

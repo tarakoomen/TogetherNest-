@@ -4,7 +4,7 @@ class ProfilesController < ApplicationController
 
   def update
     if current_user.update(user_params)
-      redirect_to root_path, notice: "Your profile was successfully updated.", status: :see_other
+      redirect_to grouprec_path, notice: "Your profile was successfully updated.", status: :see_other
     else
       render :edit, status: :unprocessable_entity
     end
