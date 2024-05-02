@@ -9,4 +9,12 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit(:sign_up, keys: %i[first_name last_name nickname photo])
     # devise_parameter_sanitizer.permit(:account_update, keys: %i[first_name last_name nickname])
   end
+
+  def after_sign_in_path_for(resource)
+    if resource.is_a?(User) && resource.groups.any?
+      group_path(resource.groups.first)
+    else
+      super
+    end
+  end
 end
