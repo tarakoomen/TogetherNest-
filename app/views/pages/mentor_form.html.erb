@@ -1,0 +1,38 @@
+<div class="form-flexbox-lhs">
+  <div class="white-form-rounded-wide">
+    <h2 class="two-color-headline">mentor<span class="nest-purple">program</span></h2>
+    <p>
+      Share a brief introduction about yourself. This message will help potential mentors understand your background, interests, and what you hope to gain from a mentoring relationship. Feel free to highlight areas where you seek guidance.
+    </p>
+    <p>
+      Your introduction will serve as the first step in connecting with mentors who can support your growth and development.
+    </p>
+
+    <%= simple_form_for(current_user, as: :user, url: profile_path, html: { method: :patch }) do |f| %>
+      <%= f.error_notification %>
+
+      <div class="form-inputs">
+
+        <%= f.input :due_date,
+                    required: true,
+                    as: :string,
+                    input_html: { autocomplete: "due date", data: { controller: "datepicker" } }  %>
+        <%= f.input :post_code,
+                    required: true,
+                    input_html: { autocomplete: "postcode" } %>
+        <%= f.input :bio,
+                  required: true,
+                  input_html: { autocomplete: "short bio to introduce yourself" } %>
+      </div>
+      <p>  </p>
+      <p>Continue below for you profile to be carefully matched to potential mentors.</p>
+      <p>Your mentor options will be shown on the next page.</p>
+      <div class="btn">
+        <%= link_to "connect", mentor_rec_path %>
+      </div>
+    <% end %>
+
+    <p>Not so keen? Click <%= link_to "here", root_path %></p>  </div>
+</div>
+<div class="tree-bg-mentor-form">
+</div>
