@@ -30,3 +30,14 @@
   top: 0;
   z-index: -4;
 }
+
+.tree-bg-mentor-info {
+  background-image: url('tree-mentor-info.svg');
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: center center;
+  position: fixed;
+  top: 0;
+  z-index: -4;
+}

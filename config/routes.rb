@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   root to: "pages#home"
 
   get '/grouprec', to: 'pages#grouprec'  # Matt's temporary page
+  get '/mentor_info', to: 'pages#mentor_info'  # Matt's temporary page
 
 
   resources :groups, only: [:index, :show] do

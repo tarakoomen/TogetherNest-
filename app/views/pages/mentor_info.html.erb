@@ -1,0 +1,37 @@
+<div class="form-flexbox-rhs">
+  <div class="half-page">
+    <h2 class="two-color-sentence">mentor <span class="nest-purple">program</span></h2>
+     <div style="display: flex; align-items: center;">
+      <div class="mentor-info-container">
+        <%= image_tag asset_path("parent1.jpg"), class: "mentor-info-avatar-lg" %>
+      </div>
+      <h1 id="plus">+</h1>
+      <div class="mentor-info-container">
+        <%= cl_image_tag current_user.photo.key, class: "mentor-info-avatar-lg" %>
+      </div>
+    </div>
+
+    <p>We are excited to welcome you to a close-knit community group of parents just like you. This group placement was carefully calculated based on criteria such as your location and the due date / birth date of your little one, ensuring you are connected with parents who can understand and relate to the journey you are on.</p>
+    <p>Continue below to join the mentor.</p>
+    <ul>
+    <li>Refrain from posting inappropriate content.</li>
+    <li>Be respectful to other users and engage in healthy communication.</li>
+    <li>Protect your own privacy by regularly reviewing your togethernes privacy settings. If necessary, set the public scope of your posts.</li>
+    </ul>
+    <p>togethernest will take proactive steps to ensure the safety of our community.</p>
+
+    <p>Not so keen? Click <%= link_to "here", root_path %></p>
+      <div class="mentor-info-btn-container">
+    <div class="mentor-info-btn-hp">
+      <%= link_to "Find mentor", root_path %>
+    </div>
+    <div class="mentor-info-btn-hp">
+      <%= link_to "Be mentor ", root_path %>
+    </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="tree-bg-mentor-info">
+</div>
