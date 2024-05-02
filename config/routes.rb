@@ -1,12 +1,11 @@
 Rails.application.routes.draw do
+  root to: 'pages#home'
   devise_for :users, controllers: { registrations: "registrations" }
-  root to: "pages#home"
 
-  get '/grouprec', to: 'pages#grouprec'  # Matt's temporary page
-  get '/mentor_info', to: 'pages#mentor_info'  # Matt's temporary page
+  get 'grouprec', to: 'pages#grouprec'  # Matt's temporary page
+  get 'mentor_info', to: 'pages#mentor_info'  # Matt's temporary page
 
-
-  resources :groups, only: [:index, :show] do
+  resources :groups, only: [:index, :new, :create, :show] do
     resources :messages, only: :create
   end
 
