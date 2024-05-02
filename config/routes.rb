@@ -2,8 +2,10 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: "registrations" }
   root to: "pages#home"
 
-  get '/grouprec', to: 'pages#grouprec'  # Matt's temporary page
-  get '/mentor_info', to: 'pages#mentor_info'  # Matt's temporary page
+  get '/group_rec', to: 'pages#group_rec'  # Matt's temporary page
+  get '/mentor_info', to: 'pages#mentor_info'  # Yumi's temporary page
+  get '/mentor_form', to: 'pages#mentor_form'  # Matt's temporary page
+  get '/mentor_rec', to: 'pages#mentor_rec'  # Matt's temporary page
 
 
   resources :groups, only: [:index, :show] do

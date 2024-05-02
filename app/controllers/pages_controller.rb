@@ -4,10 +4,16 @@ class PagesController < ApplicationController
   def home
   end
 
-  def grouprec   # Matt's temporary page
+  def group_rec   # Matt's temporary page
   end
 
-  def mentor_info
-
+  def mentor_info # Yumi's temporary page
   end
+
+  def mentor_form   # Matt's temporary page
+  end
+
+  def mentor_rec   # Matt's temporary page
+  end
+
 end

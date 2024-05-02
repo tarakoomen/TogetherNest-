@@ -25,7 +25,18 @@
   height: 100vh;
   width: 100vw;
   background-size: cover;
-  background-position: center center;
+  background-position: center top;
+  position: fixed;
+  top: 0;
+  z-index: -4;
+}
+
+.tree-bg-dashboard {
+  background-image: url('tree-dashboard.svg');
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: center top;
   position: fixed;
   top: 0;
   z-index: -4;
@@ -33,6 +44,28 @@
 
 .tree-bg-mentor-info {
   background-image: url('tree-mentor-info.svg');
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: center top;
+  position: fixed;
+  top: 0;
+  z-index: -4;
+}
+
+.tree-bg-mentor-form {
+  background-image: url('tree-mentor-q.svg');
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: center center;
+  position: fixed;
+  top: 0;
+  z-index: -4;
+}
+
+.tree-bg-mentor-rec {
+  background-image: url('tree-mentor-select.svg');
   height: 100vh;
   width: 100vw;
   background-size: cover;
