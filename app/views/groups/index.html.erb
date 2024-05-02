@@ -9,7 +9,7 @@
             <h6 class="card-text">
               <%= group.post_code %>
             </h6>
-            <%= link_to "Join this group", group, class: "card-link" %>
+            <%= button_to "Join this group", join_group_path(group), class: "card-link" %>
           </div>
         </div>
       </div>

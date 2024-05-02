@@ -1,6 +1,6 @@
 class GroupsController < ApplicationController
   def index
-    @groups = Group.where(group_type: "parent community")
+    @groups = Group.where(group_type: "parent community").limit(3)
   end
 
   def new
@@ -21,6 +21,12 @@ class GroupsController < ApplicationController
     @group = Group.find(params[:id])
     @group_type = @group.group_type
     @message = Message.new
+  end
+
+  def join
+    group = Group.find(params[:id])
+    current_user.groups << group
+    redirect_to group
   end
 
   private
