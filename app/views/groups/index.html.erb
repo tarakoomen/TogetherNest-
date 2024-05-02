@@ -1,5 +1,5 @@
   <div class="slider-group-index">
-    <% @groups.each do |group| %>
+    <% @relevant_groups.each do |group| %>
       <div class="card">
         <div class="card-body">
           <div>
@@ -9,7 +9,11 @@
             <h6 class="card-text">
               <%= group.post_code %>
             </h6>
-            <%= button_to "Join this group", join_group_path(group), class: "card-link" %>
+            <% if current_user.groups.include? group %>
+              <p>You're already a part of this group</p>
+            <% else %>
+              <%= button_to "Join this group", join_group_path(group), class: "card-link" %>
+            <% end %>
           </div>
         </div>
       </div>

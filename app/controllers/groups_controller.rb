@@ -1,6 +1,9 @@
 class GroupsController < ApplicationController
   def index
-    @groups = Group.where(group_type: "parent community").limit(3)
+    groups = Group.where(group_type: "parent community").where.not(post_code: nil)
+    @relevant_groups = groups.min_by(3) do |group|
+      (group.post_code - current_user.post_code).abs
+    end
   end
 
   def new
