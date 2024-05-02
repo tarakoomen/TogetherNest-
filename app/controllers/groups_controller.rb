@@ -1,9 +1,6 @@
 class GroupsController < ApplicationController
   def index
-    # @group.user = current_user
-    @user_post_code = current_user.post_code
-    closest_group = @groups.min_by { |group| (group[:postcode] - user.postcode).abs }
-    @groups = Group.sorted_by(closest_group).limit(3)
+    @groups = Group.where(group_type: "parent community")
   end
 
   def new
