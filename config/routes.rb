@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   get '/mentor_rec', to: 'pages#mentor_rec'  # Matt's temporary page
 
   resources :groups, only: [:index, :new, :create, :show] do
+    member do
+      post :join
+    end
     resources :messages, only: :create
   end
 

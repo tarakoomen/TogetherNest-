@@ -1,3 +1,6 @@
+<% if current_user.groups.include? @group %>
+  <p>Welcome to your group</p>
+<% end %>
 <% if @group_type == "parent community" %>
   <%= render "parent_community"  %>
 <% elsif @group_type == "mentor" %>
