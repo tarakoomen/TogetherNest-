@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   resources :groups, only: [:index, :new, :create, :show] do
     member do
       post :join
+      delete :leave
     end
     resources :messages, only: :create
   end
