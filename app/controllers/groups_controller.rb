@@ -14,7 +14,7 @@ class GroupsController < ApplicationController
     @group = Group.new(group_params)
     # @group.user = current_user
     if @group.save
-      redirect_to @group
+      redirect_to @group, notice: "New parent community group was successfully created"
     else
       render :new, status: :unprocessable_entity
     end
