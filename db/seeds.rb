@@ -1,3 +1,10 @@
+User.destroy_all
+Group.destroy_all
+Message.destroy_all
+GroupUser.destroy_all
+
+puts 'creating user bios...'
+
 user_bios = [
   "Coffee enthusiast. Cat lover. Netflix binger.",
   "Tech geek by day, foodie by night.",
@@ -928,18 +935,23 @@ file = URI.open('https://randomuser.me/api/portraits/women/87.jpg')
 user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
 user.save!
 
+puts 'Creating parent community groups'
 # Parent Community Groups
 
 Group.create(name: 'Sydney parent group', group_type: 'parent community', post_code: 2000)
 Group.create(name: 'Melbourne parent group', group_type: 'parent community', post_code: 3000)
 Group.create(name: 'Brisbane parent group', group_type: 'parent community', post_code: 4000)
 
+puts 'Creating private messaging groups'
 # Private Messaging Groups
 
 Group.create(name: 'John and Jane chat', group_type: 'private messaging')
 Group.create(name: 'Lola and Mike chat', group_type: 'private messaging')
 
+puts 'Creating mentor groups'
 # Mentor Groups
 
 Group.create(name: 'Paul and Jack mentor group', group_type: 'mentor')
 Group.create(name: 'Lisa and Mike mentor group', group_type: 'mentor')
+
+puts 'All done!'
