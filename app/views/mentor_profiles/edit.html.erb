@@ -1,0 +1,31 @@
+<div class="form-flexbox-rhs">
+  <div class="white-form-rounded">
+    <h2 class="two-color-headline">become a<span class="nest-purple">mentor</span></h2>
+    <p>To ensure we find your perfect match with a parent looking for a mentor, please share more about yourself in as much detail as possible. Make sure you include how many years you have been parenting under 'parent experience'. Your answers will enable us to match you seamlessly with a parent needing your expertise and guidance.</p>
+    <%= simple_form_for(current_user, as: :user, url: profile_path, html: { method: :patch }) do |f| %>
+      <%= f.error_notification %>
+
+      <div class="form-inputs">
+
+        <%= f.input :post_code,
+                    required: true,
+                    as: :string,
+                    input_html: { autocomplete: "postcode" }  %>
+        <%= f.input :parent_experience,
+                    required: true,
+                    as: :string,
+                    input_html: { autocomplete: "parent experience in years" } %>
+        <%= f.input :bio,
+                  required: true,
+                  input_html: { autocomplete: "A detailed bio to introduce yourself" } %>
+      </div>
+
+      <div class="form-actions">
+        <%= f.button :submit, "Continue" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<div class="tree-bg-user-edit">
+</div>

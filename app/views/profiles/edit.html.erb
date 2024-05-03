@@ -13,10 +13,11 @@
                     input_html: { autocomplete: "due date", data: { controller: "datepicker" } }  %>
         <%= f.input :post_code,
                     required: true,
+                    as: :string,
                     input_html: { autocomplete: "postcode" } %>
         <%= f.input :bio,
-                  required: true,
-                  input_html: { autocomplete: "short bio to introduce yourself" } %>
+                    required: true,
+                    input_html: { autocomplete: "short bio to introduce yourself" } %>
       </div>
 
       <div class="form-actions">
