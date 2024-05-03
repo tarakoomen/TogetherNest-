@@ -1,4 +1,4 @@
-puts 'Deleting the current database...'
+puts 'Destroying current database entries...'
 
 GroupUser.destroy_all
 Message.destroy_all
