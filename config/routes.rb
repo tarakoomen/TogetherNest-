@@ -15,6 +15,7 @@ Rails.application.routes.draw do
   end
 
   resource :profile, only: [:edit, :update]
+  resource :mentor_profile, only: [:edit, :update]
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
