@@ -1,36 +1,25 @@
 .group {
-  background-color: rgba(250, 244, 215, 0.55);
-  margin-top: 9px;
-  height: calc(100vh - 150px);
-  max-width: 70%;
-  margin-left: 0;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 30px 30px;
+  padding-bottom: 0;
+  height: calc(100vh);
+  max-width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  float: left;
   flex-grow: 1;
+  border: 10px solid white;
   border-radius: 25px;
   transform: scale(0.75);
-
-  h1 {
-    margin-bottom: 0;
-    text-align: left;
-    color: $tn-indigo;
-    font-size: 42px;
-    font-family: "Montserrat";
-    font-optical-sizing: auto;
-    font-weight: 300;
-    letter-spacing: 0.15em;
-  }
 
   .messages {
     height: 100%;
     overflow: scroll;
-    padding: 1rem;
   }
 
   #new_message {
-    border-top: 1px solid $gray-200;
+    border-top: 1px solid white;
+    margin-top: 20px;
     padding: 1rem;
 
     .form-group {
@@ -42,14 +31,17 @@
 p {
   color: $tn-indigo;
   font-family: "Montserrat";
+  font-size: 20px;
   font-optical-sizing: auto;
-  font-weight: 400;
-  letter-spacing: 0.1em;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  margin-left: 35px;
+  margin-top: 12px;
 }
 
   .btn {
     color: $tn-purple;
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgb(243, 243, 243);
     font-family: "Montserrat", sans-serif;
     font-size: x-large;
     font-weight: 300;
@@ -58,7 +50,7 @@ p {
     margin-left: 9px;
     border-radius: 13px;
     border-width: 1px;
-    border-color: rgba(221, 221, 221, 0.693);
+    border-color: rgba(216, 216, 216, 0.693);
     text-decoration: none;
     text-align: center;
     transition: background-color 0.5s ease, padding 0.5s ease, font-weight 0.5s ease, border-color 0.5s ease, border-radius 0.5s ease;
@@ -68,8 +60,15 @@ p {
     background-color: rgba(255, 255, 255, 1);
     font-weight: 400;
     text-shadow: 1px 1px 4px rgba(206, 153, 250, 0.55);
-    border-width: 1px;
+    border-width: 2px;
     border-color: $tn-purple;
     border-radius: 20px;
   }
+}
+
+.outer {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  margin-left: 10vw;
 }
