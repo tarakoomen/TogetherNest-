@@ -32,6 +32,12 @@ class GroupsController < ApplicationController
     redirect_to group
   end
 
+  def leave
+    group = Group.find(params[:id])
+    current_user.groups.delete(group)
+    redirect_to root
+  end
+
   private
 
   def group_params
