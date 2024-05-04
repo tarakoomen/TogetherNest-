@@ -1,6 +1,6 @@
 <div class="form-flexbox-rhs">
   <div class="mentors-x3-container">
-    <h2 class="two-color-sentence">your together<span class="nest-purple">nest</span> mentor matches</h2>
+    <h2 class="two-color-sentence">your together<span class="nest-purple">nest</span><br>mentor matches</h2>
     <p>
       We're thrilled to inform you that we've identified three ideal mentor options tailored specifically to your situation. Each mentor brings unique expertise and experience. Ultimately, the decision is yours, empowering you to choose the mentor who you feel most comfortable with.
     </p>
@@ -10,7 +10,7 @@
         <h2>Jo</h2>
         <p>Loving mum of three cheeky boys</p>
         <div class="btn">
-          <%= link_to "connect", root_path %>
+          <%= link_to "request", root_path %>
         </div>
       </div>
       <div class="mentor-card">
@@ -18,7 +18,7 @@
         <h2>Billy</h2>
         <p>I'd say I'm a tough but fair dad</p>
         <div class="btn">
-          <%= link_to "connect", root_path %>
+          <%= link_to "request", root_path %>
         </div>
       </div>
       <div class="mentor-card">
@@ -26,12 +26,15 @@
         <h2>Emma</h2>
         <p>My kids are absolute animals</p>
         <div class="btn">
-          <%= link_to "connect", root_path %>
+          <%= link_to "request", root_path %>
         </div>
       </div>
     </div>
     <p>
       Make your selection above and your preferred mentor will recieve your request along with your profile and introduction message. Once accepted, we will connect you.
+    </p>
+    <p>
+      If you you do not wish to proceed at this time, please click <%= link_to "here", group_path(1) %>
     </p>
   </div>
 </div>
