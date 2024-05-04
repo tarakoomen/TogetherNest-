@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get '/mentor_info', to: 'pages#mentor_info'  # Yumi's temporary page
   get '/mentor_form', to: 'pages#mentor_form'  # Matt's temporary page
   get '/mentor_rec', to: 'pages#mentor_rec'  # Matt's temporary page
+  get '/mentoree_show', to: 'pages#mentoree_show'  # Matt's temporary page
 
   resources :groups, only: [:index, :new, :create, :show] do
     member do

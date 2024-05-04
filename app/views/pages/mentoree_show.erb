@@ -1,0 +1,30 @@
+<div class="form-flexbox-rhs">
+  <div class="half-page">
+    <h2 class="two-color-sentence">you have a new <span class="nest-purple">mentorship</span> request</h2>
+    <p>
+      A new parent has requested you to mentor them on their parenthood journey. This is a big commitment, please review their profile and take the time to consider if this is the right fit for the two of you. It's a big commitment and important responsibility to be trusted to give advice on topics that can help a family.
+    </p>
+    <div style="display: flex; justify-content: center;">
+      <div class="mentoree-card">
+        <div class="new-parent-container">
+          <%= cl_image_tag current_user.photo.key, class: "tn-avatar-lg avatar" %>
+        </div>
+        <h2>"name"</h2>
+        <p>"bio...."</p>
+        <div class="btn">
+          <%= link_to "accept", root_path %>
+        </div>
+      </div>
+    </div>
+    <p>
+      Click accept when you are comfortable to continue. A dedicated space will be set up for you and your mentoree to connect.
+    </p>
+    <p>
+      To decline this invitation, please click <%= link_to "here", mentor_form_path %>
+    </p>
+  </div>
+</div>
+
+
+<div class="tree-bg-mentor-rec">
+</div>
