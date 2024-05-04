@@ -1,0 +1,14 @@
+
+<h1>Welcome to <%= @group.name %></h1>
+<div class="mentor-list">
+  <% @users.each do |user| %>
+    <div class="mentor-card">
+      <%= cl_image_tag user.photo.key, class: "avatar"%>
+      <h2><%= user.first_name %></h2>
+      <p><%= user.bio %></p>
+    </div>
+  <% end %>
+</div>
+
+<div class="tree-bg-user-edit">
+</div>
