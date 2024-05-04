@@ -15,6 +15,12 @@ Rails.application.routes.draw do
     end
     resources :messages, only: :create
   end
+
+  resource :mentorship do
+    post :join
+    get :find
+  end
+
   resource :group_users, only: [:create, :destroy]
   resource :profile, only: [:edit, :update]
   resource :mentor_profile, only: [:edit, :update]
