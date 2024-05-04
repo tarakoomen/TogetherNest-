@@ -40,11 +40,6 @@ class GroupsController < ApplicationController
 
   private
 
-  def test
-    GroupUser.create(user: current_user, group: @group)
-
-  end
-
   def group_params
     params.require(:group).permit(:name, :post_code)
   end
