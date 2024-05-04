@@ -15,6 +15,7 @@
             <h6 class="card-text">
               This mentor's postcode: <%= mentor_user.post_code %>
             </h6>
+            <%= button_to "Select", mentorship_path(mentor_id: mentor_user.id) %>
           </div>
         </div>
       </div>

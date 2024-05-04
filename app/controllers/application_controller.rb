@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
 
   def after_sign_in_path_for(resource)
     if resource.is_a?(User) && resource.groups.any?
-      group_path(resource.groups.first)
+      group_path(resource.groups.where(group_type: "parent community").first)
     else
       super
     end
