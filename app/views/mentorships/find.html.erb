@@ -1,0 +1,22 @@
+  <div class="slider-group-index">
+    <% @mentor_match.each do |mentor_user| %>
+      <div class="card">
+        <div class="card-body">
+          <div>
+            <h6 class="card-title">
+              <%= mentor_user.first_name %>
+            </h6>
+            <h6 class="card-text">
+              <%= cl_image_tag mentor_user.photo.key, class: "avatar-large", alt: "user photo" %>
+            </h6>
+            <h6 class="card-text">
+              More about this mentor: <%= mentor_user.bio %>
+            </h6>
+            <h6 class="card-text">
+              This mentor's postcode: <%= mentor_user.post_code %>
+            </h6>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
