@@ -104,8 +104,7 @@ user = User.new(
   due_date: '2024-09-14',
   post_code: '2005',
   parent_experience: 8,
-  is_mentor: true,
-
+  is_mentor: true
 )
 file = URI.open('https://randomuser.me/api/portraits/women/73.jpg')
 user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
@@ -122,8 +121,7 @@ user = User.new(
   due_date: '2025-04-06',
   post_code: '2003',
   parent_experience: 4,
-  is_mentor: true,
-
+  is_mentor: true
 )
 file = URI.open('https://randomuser.me/api/portraits/women/39.jpg')
 user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
@@ -140,8 +138,7 @@ user = User.new(
   due_date: '2025-03-19',
   post_code: '2000',
   parent_experience: 7,
-  is_mentor: true,
-
+  is_mentor: true
 )
 file = URI.open('https://randomuser.me/api/portraits/women/2.jpg')
 user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
@@ -158,8 +155,7 @@ user = User.new(
   due_date: '2024-05-30',
   post_code: '2006',
   parent_experience: 3,
-  is_mentor: true,
-
+  is_mentor: true
 )
 file = URI.open('https://randomuser.me/api/portraits/women/68.jpg')
 user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
@@ -176,8 +172,7 @@ user = User.new(
   due_date: '2024-09-22',
   post_code: '2002',
   parent_experience: 7,
-  is_mentor: true,
-
+  is_mentor: true
 )
 file = URI.open('https://randomuser.me/api/portraits/women/41.jpg')
 user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
@@ -194,8 +189,7 @@ user = User.new(
   due_date: '2024-11-13',
   post_code: '3002',
   parent_experience: 3,
-  is_mentor: true,
-
+  is_mentor: true
 )
 file = URI.open('https://randomuser.me/api/portraits/women/14.jpg')
 user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
@@ -212,8 +206,7 @@ user = User.new(
   due_date: '2024-10-05',
   post_code: '3002',
   parent_experience: 1,
-  is_mentor: true,
-
+  is_mentor: true
 )
 file = URI.open('https://randomuser.me/api/portraits/women/56.jpg')
 user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
@@ -230,8 +223,7 @@ user = User.new(
   due_date: '2024-12-31',
   post_code: '3006',
   parent_experience: 7,
-  is_mentor: true,
-
+  is_mentor: true
 )
 file = URI.open('https://randomuser.me/api/portraits/women/46.jpg')
 user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
@@ -248,8 +240,7 @@ user = User.new(
   due_date: '2025-03-19',
   post_code: '3005',
   parent_experience: 8,
-  is_mentor: true,
-
+  is_mentor: true
 )
 file = URI.open('https://randomuser.me/api/portraits/women/90.jpg')
 user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
@@ -266,8 +257,7 @@ user = User.new(
   due_date: '2024-07-11',
   post_code: '3010',
   parent_experience: 6,
-  is_mentor: true,
-
+  is_mentor: true
 )
 file = URI.open('https://randomuser.me/api/portraits/women/23.jpg')
 user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
