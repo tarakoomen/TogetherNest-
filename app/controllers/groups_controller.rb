@@ -38,6 +38,11 @@ class GroupsController < ApplicationController
     redirect_to root_path
   end
 
+  def users
+    @group = Group.find(params[:id])
+    @users = @group.users
+  end
+
   private
 
   def group_params
