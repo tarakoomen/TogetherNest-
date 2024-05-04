@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get '/mentor_rec', to: 'pages#mentor_rec'  # Matt's temporary page
   get '/mentoree_show', to: 'pages#mentoree_show'  # Matt's temporary page
 
+
   resources :groups, only: [:index, :new, :create, :show] do
     member do
       post :join
@@ -21,6 +22,7 @@ Rails.application.routes.draw do
     get :find
   end
 
+  resource :group_users, only: [:create, :destroy]
   resource :profile, only: [:edit, :update]
   resource :mentor_profile, only: [:edit, :update]
 
