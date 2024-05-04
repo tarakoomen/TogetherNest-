@@ -7,3 +7,18 @@
   <%= render "mentor_group"  %>
 <% else %>
 <% end %>
+
+<% group_user = GroupUser.find_by(user_id: current_user.id, group_id: @group.id) %>
+
+<% if group_user %>
+  <p>You are a member</p>
+<% else %>
+<%= link_to "Join Group", group_users_path(user: current_user, group: @group), data: { turbo_method: :post }, onclick: 'alert("You have joined the group!");'%>
+  <%# <button id="joinButton" onclick="joinGroup()">Join</button> %>
+<% end %>
+<%# <script>
+function joinGroup() {
+ document.getElementById("joinButton").style.display = "none";
+  alert("You have joined the group!");
+}
+</script> %>
