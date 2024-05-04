@@ -16,6 +16,11 @@ Rails.application.routes.draw do
     resources :messages, only: :create
   end
 
+  resource :mentorship do
+    post :join
+    get :find
+  end
+
   resource :profile, only: [:edit, :update]
   resource :mentor_profile, only: [:edit, :update]
 

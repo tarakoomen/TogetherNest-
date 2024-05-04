@@ -2,6 +2,9 @@ class User < ApplicationRecord
   has_many :messages
   has_many :group_users
   has_many :groups, through: :group_users
+  belongs_to :mentor, class_name: "User", optional: true
+  has_one :mentee, class_name: "User", foreign_key: :mentee_id
+
   has_one_attached :photo
 
   validates :first_name, presence: true
