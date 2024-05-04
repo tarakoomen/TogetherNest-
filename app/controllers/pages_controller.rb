@@ -16,4 +16,7 @@ class PagesController < ApplicationController
   def mentor_rec   # Matt's temporary page
   end
 
+  def mentoree_show   # Matt's temporary page
+  end
+
 end
