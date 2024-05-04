@@ -2,25 +2,30 @@
   <div class="half-page">
     <h2 class="two-color-sentence">you have a new <span class="nest-purple">mentorship</span> request</h2>
     <p>
-      A new parent has requested you to mentor them on their parenthood journey. This is a big commitment, please review their profile and take the time to consider if this is the right fit for the two of you. It's a big commitment and important responsibility to be trusted to give advice on topics that can help a family.
+      A new parent has requested you to mentor them on their parenthood journey. Please review their profile and take the time to consider if this is the right fit for the two of you.
     </p>
-    <div style="display: flex; justify-content: center;">
+
       <div class="mentoree-card">
         <div class="new-parent-container">
-          <%= cl_image_tag current_user.photo.key, class: "tn-avatar-lg avatar" %>
+          <%= image_tag asset_path("parent2.jpg"), class: "tn-avatar-lg avatar" %>
         </div>
         <h2>"name"</h2>
-        <p>"bio...."</p>
-        <div class="btn">
-          <%= link_to "accept", root_path %>
+        <p>"As a parent, I've learned that the greatest joys often come from the simplest moments. Whether it's sharing giggles over a messy finger-painting session or cuddling up for bedtime stories, every day brings new adventures and opportunities for growth. My journey through parenthood has taught me patience, resilience, and the importance of cherishing every milestone, no matter how small. Together, my family and I navigate the ups and downs of life with love, laughter, and plenty of hugs along the way"</p>
+        <div class="flex">
+          <div class="btn">
+            <%= link_to "accept", root_path %>
+          </div>
+          <div class="btn">
+            <%= link_to "decline", group_path(1) %>
+          </div>
         </div>
       </div>
-    </div>
+
     <p>
       Click accept when you are comfortable to continue. A dedicated space will be set up for you and your mentoree to connect.
     </p>
     <p>
-      To decline this invitation, please click <%= link_to "here", mentor_form_path %>
+      To decline this invitation, please click <%= link_to "here", group_path(1) %>
     </p>
   </div>
 </div>
