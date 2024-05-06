@@ -1,21 +1,27 @@
-  <div class="slider-group-index">
-    <% @relevant_groups.each do |group| %>
-      <div class="card">
-        <div class="card-body">
-          <div>
-            <h6 class="card-title">
-              <%= group.name %>
-            </h6>
-            <h6 class="card-text">
-              <%= group.post_code %>
-            </h6>
-            <% if current_user.groups.include? group %>
-              <p>You're already a part of this group</p>
-            <% else %>
-              <%= button_to "Join this group", join_group_path(group), class: "card-link" %>
-            <% end %>
-          </div>
+<div class="form-flexbox-lhs">
+  <div class="half-page-wider">
+    <h2 class="two-color-headline">group<span class="nest-purple">placement</span></h2>
+    <p>Based on your profile we can determine the best 3 group options for you to join. The following parent groups are recommended to you because the members are based in your general area and, importantly, the due dates / birth dates of their babies align with yours – an important factor for peer support, understanding and relating to one another.</p>
+
+    <div style="display: flex; justify-content: space-between;">
+      <% @relevant_groups.each do |group| %>
+        <div class="group-rec-card">
+          <%= image_tag asset_path("tree-thumbnail.png"), class: "tn-avatar-lg-purple" %>
+          <h2><%= group.name.downcase %></h2>
+          <h6><%= group.post_code %></h6>
+          <% if current_user.groups.include?(group) %>
+            <p>You're already<br>a part of<br>this group</p>
+          <% else %>
+            <%= button_to "join", join_group_path(group), class: "card-link" %>
+          <% end %>
         </div>
-      </div>
-    <% end %>
+      <% end %>
+    </div>
+
+    <p>A supportive space where you can share advice, moral support, and laughter is within reach.</p>
+    <p>Otherwise, you can start your very own group <%= link_to "here", new_group_path %></p>
+    <p>Not interested in joining a togthernest community group today? Click <%= link_to "here", root_path %></p>
   </div>
+</div>
+
+<div class="tree-bg-group-rec"></div>

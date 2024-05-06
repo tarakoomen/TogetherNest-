@@ -18,6 +18,26 @@
   }
 }
 
+.half-page-wider {
+  width: 800px;
+  margin-bottom: 10vh;
+  transform: scale(0.80);
+
+  p {
+    color: $tn-indigo;
+    font-family: "Montserrat";
+    font-optical-sizing: auto;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+  }
+
+  a {
+    text-decoration: none;
+    color: $tn-purple;
+    font-weight: 400;
+  }
+}
+
 .btn-hp {
   a {
   display: inline-block;
