@@ -4,7 +4,7 @@ class ProfilesController < ApplicationController
 
   def update
     if current_user.update(user_params)
-      redirect_to group_rec_path, notice: "Your answers were succesfully saved", status: :see_other
+      redirect_to groups_path, notice: "Your answers were succesfully saved", status: :see_other
     else
       render :edit, status: :unprocessable_entity
     end

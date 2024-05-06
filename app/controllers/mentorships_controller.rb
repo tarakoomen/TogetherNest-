@@ -1,11 +1,14 @@
 class MentorshipsController < ApplicationController
   def join
-    current_user.update(is_mentor: true)
-    redirect_to edit_mentor_profile_path
+    if current_user.update(is_mentor: true)
+      redirect_to edit_mentor_profile_path
+    else
+      redirect_to mentorship_path, notice: current_user.errors.full_messages.to_sentence
+    end
   end
 
   def find
-    mentor_users = User.where(is_mentor: true)
+    mentor_users = User.where(is_mentor: true).excluding(current_user)
     @mentor_match = mentor_users.min_by(3) do |mentor_user|
       (mentor_user.post_code - current_user.post_code).abs
     end

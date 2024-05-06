@@ -1,4 +1,7 @@
 class GroupsController < ApplicationController
+  before_action :find_group, only: [:show, :join, :leave]
+  before_action :authorize_access, only: [:show]
+
   def index
     groups = Group.where(group_type: "parent community").where.not(post_code: nil)
     @relevant_groups = groups.min_by(3) do |group|
@@ -12,40 +15,60 @@ class GroupsController < ApplicationController
 
   def create
     @group = Group.new(group_params)
-    # @group.user = current_user
+    @group.users << current_user
     if @group.save
-      redirect_to @group, notice: "New parent community group was successfully created. Make sure to click the 'join' button."
+      redirect_to @group, notice: "New parent community group was successfully created."
     else
       render :new, status: :unprocessable_entity
     end
   end
 
   def show
-    @group = Group.find(params[:id])
     @group_type = @group.group_type
     @message = Message.new
   end
 
   def join
-    group = Group.find(params[:id])
-    current_user.groups << group
-    redirect_to group
+    current_user.groups << @group
+    redirect_to @group
   end
 
   def leave
-    group = Group.find(params[:id])
-    current_user.groups.delete(group)
+    if @group.group_type == "parent community"
+      current_user.groups.delete(@group)
+    else
+      if current_user.is_mentor?
+        current_user.mentee.update(mentor: nil)
+        current_user.update(mentee: nil)
+      end
+      unless current_user.is_mentor?
+        current_user.mentor.update(mentee: nil)
+        current_user.update(mentor: nil)
+      end
+      @group.destroy
+    end
     redirect_to root_path
   end
 
   def users
-    @group = Group.find(params[:id])
     @users = @group.users
   end
 
   private
 
+  def find_group
+    @group = Group.find(params[:id])
+  end
+
+  def authorize_access
+    find_group
+    return if @group.users.include?(current_user)
+
+    redirect_to root_path, notice: "You aren't a member of this group."
+  end
+
   def group_params
     params.require(:group).permit(:name, :post_code)
   end
+
 end
