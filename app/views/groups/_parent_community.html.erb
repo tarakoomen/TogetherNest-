@@ -31,7 +31,7 @@
           <%= link_to "members", users_group_path %>
         </div>
         <div class="btn">
-          <%= link_to "mentor program", mentor_info_path %>
+          <%= link_to "mentor program", mentorship_path %>
         </div>
       </div>
       <div class="btn-join">
@@ -43,7 +43,7 @@
          <% end %>
           <div class="btn">
             <%= link_to "Leave group", leave_group_path(@group),
-            data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to leave this group?" },
+            data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to permanently leave this group?" },
             class: "ms-3 text-danger" %>
           </div>
       </div>

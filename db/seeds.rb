@@ -94,6 +94,9 @@ puts 'Creating mentor groups...'
 Group.create(name: 'Paul and Jack mentor group', group_type: 'mentor')
 Group.create(name: 'Lisa and Mike mentor group', group_type: 'mentor')
 
+puts 'Creating 10 mentor users...'
+# 10 mentor users
+
 user = User.new(
   email: 'minerva.puente@example.com',
   password: '4591daa44cf24d43',
@@ -263,6 +266,9 @@ file = URI.open('https://randomuser.me/api/portraits/women/23.jpg')
 user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
 user.save!
 melbourne_group.users << user
+
+puts 'Creating 50 parent users...'
+# 50 parent users
 
 user = User.new(
   email: 'yolanda.jimenez@example.com',
@@ -997,7 +1003,5 @@ user = User.new(
 file = URI.open('https://randomuser.me/api/portraits/women/87.jpg')
 user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
 user.save!
-
-
 
 puts 'All done!'
