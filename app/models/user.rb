@@ -16,6 +16,8 @@ class User < ApplicationRecord
     }
   validates :photo, presence: true
 
+  validate :can_become_mentor?
+
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
@@ -23,5 +25,11 @@ class User < ApplicationRecord
 
   def strip_email
     self.email = email.strip unless email.nil?
+  end
+
+  def can_become_mentor?
+    if is_mentor_changed?(from: false, to: true) && mentor_id.present?
+      errors.add(:base, :invalid, message: "You cannot become a mentor when you're a mentee")
+    end
   end
 end
