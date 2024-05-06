@@ -1,13 +1,25 @@
+<div class="sml-title-purple-align-right">
+  directory
+</div>
 
-<h1>Welcome to <%= @group.name %></h1>
-<div class="mentor-list">
+<div class="two-color-sentence-align-right">
+  <%= @group.name.downcase %>
+</div>
+
+<div class="group-list">
   <% @users.each do |user| %>
-    <div class="mentor-card">
-      <%= cl_image_tag user.photo.key, class: "avatar"%>
+    <div class="parent-card">
+      <%= cl_image_tag user.photo.key, class: "parent-avatar-lg"%>
       <h2><%= user.first_name %></h2>
       <p><%= user.bio %></p>
     </div>
   <% end %>
+</div>
+
+<div class="group-list">
+  <div class="large-link-purple">
+    <%= link_to "Return to dashboard", :back %>
+  </div>
 </div>
 
 <div class="tree-bg-user-edit">

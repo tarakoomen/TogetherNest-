@@ -49,6 +49,15 @@
   margin-bottom: 10px;
 }
 
+.tn-avatar-lg-purple {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: $tn-purple 4px solid;
+  margin-bottom: 15px;
+}
+
 .new-parent-container {
   display: flex;
   justify-content: center;
@@ -69,4 +78,13 @@
   justify-content: center;
   align-items: center;
   margin-right: 20px;
+}
+
+.parent-avatar-lg {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: white 4px solid;
+  margin-bottom: 10px;
 }
