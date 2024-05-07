@@ -1,5 +1,40 @@
-<p>This will be the mentor program info page</p>
+<div class="form-flexbox-rhs">
+  <div class="half-page">
+    <h2 class="two-color-sentence">mentor<span class="nest-purple">program</span></h2>
+    <div style="display: flex; align-items: center;">
+      <div class="mentor-info-container">
+        <%= image_tag asset_path("parent1.jpg"), class: "mentor-info-avatar-lg" %>
+      </div>
+      <h1 id="plus">+</h1>
+      <div class="mentor-info-container">
+        <%= cl_image_tag current_user.photo.key, class: "mentor-info-avatar-lg" %>
+      </div>
+    </div>
+    <p>
+      Having a mentor can greatly benefit you in becoming a good and confident parent.
+    </p>
+    <p>
+      A mentor provides a trusted source of guidance, support, and wisdom, offering valuable insights based on their own experiences and knowledge.
+    </p>
+    <p>
+      They can help you navigate the challenges of parenthood, offering advice on various aspects such as child development, discipline techniques, communication skills, and self-care. A mentor can also serve as a role model, inspiring you to develop positive parenting practices and cultivate a nurturing environment for your children.
+    </p>
+    <p>
+      Through their encouragement and feedback, a mentor empowers you to build confidence in your parenting abilities. Ultimately, having a mentor by your side can enhance your parenting journey, equipping you with the tools and encouragement needed to thrive as a parent.
+    </p>
+    <p>
+      Continue below to join the mentorship program.
+    </p>
+    <div class="mentor-info-btn-container">
+      <div class="mentor-info-btn-hp">
+        <%= link_to "Find a mentor", find_mentorship_path %>
+      </div>
+    </div>
+    <p>
+      Are you interested in becoming a Mentor yourself? Click <%= link_to "here", join_mentorship_path %>
+    </p>
+  </div>
+</div>
 
-<%= button_to "Become a mentor", join_mentorship_path %>
-
-<%= link_to "Find a mentor", find_mentorship_path %>
+<div class="tree-bg-mentor-info">
+</div>
