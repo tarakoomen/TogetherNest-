@@ -1,5 +1,5 @@
 class GroupsController < ApplicationController
-  before_action :find_group, only: [:show, :join, :leave]
+  before_action :find_group, only: [:show, :join, :leave, :users]
   before_action :authorize_access, only: [:show]
 
   def index

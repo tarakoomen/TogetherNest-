@@ -4,7 +4,7 @@ class MentorProfilesController < ApplicationController
 
   def update
     if current_user.update(mentor_params)
-      redirect_to group_rec_path, notice: "Your answers were succesfully saved", status: :see_other
+      redirect_to group_path(current_user.groups.where(group_type: "parent community").first), notice: "Your answers were succesfully saved", status: :see_other
     else
       render :edit, status: :unprocessable_entity
     end
