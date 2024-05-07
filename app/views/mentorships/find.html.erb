@@ -1,23 +1,32 @@
-  <div class="slider-group-index">
-    <% @mentor_match.each do |mentor_user| %>
-      <div class="card">
-        <div class="card-body">
-          <div>
-            <h6 class="card-title">
-              <%= mentor_user.first_name %>
-            </h6>
-            <h6 class="card-text">
-              <%= cl_image_tag mentor_user.photo.key, class: "avatar-large", alt: "user photo" %>
-            </h6>
-            <h6 class="card-text">
-              More about this mentor: <%= mentor_user.bio %>
-            </h6>
-            <h6 class="card-text">
-              This mentor's postcode: <%= mentor_user.post_code %>
-            </h6>
-            <%= button_to "Select", mentorship_path(mentor_id: mentor_user.id) %>
+
+<div class="form-flexbox-rhs">
+  <div class="mentors-x3-container">
+      <h2 class="two-color-sentence">your together<span class="nest-purple">nest</span><br>mentor matches</h2>
+      <p>
+        We're thrilled to inform you that we've identified three ideal mentor options tailored specifically to your situation. Each mentor brings unique expertise and experience. Ultimately, the decision is yours, empowering you to choose the mentor who you feel most comfortable with.
+      </p>
+      <div style="display: flex; justify-content: space-between;">
+        <% @mentor_match.each do |mentor_user| %>
+          <div class="mentor-card">
+            <%= cl_image_tag mentor_user.photo.key, class: "avatar-large", alt: "user photo" %>
+            <h2><%= mentor_user.first_name %></h2>
+            <p><%= mentor_user.bio %></p>
+            <p>postcode: <%= mentor_user.post_code %></p>
+           <div class="btn">
+             <%= button_to "Select", mentorship_path(mentor_id: mentor_user.id) %>
+           </div>
           </div>
-        </div>
+          <% end %>
       </div>
-    <% end %>
+        <p>
+          Make your selection above and your preferred mentor will recieve your request along with your profile and introduction message. Once accepted, we will connect you.
+        </p>
+        <p>
+          If you you do not wish to proceed at this time, please click <%= link_to "here", group_path(1) %>
+        </p>
   </div>
+</div>
+
+
+<div class="tree-bg-mentor-rec">
+</div>
