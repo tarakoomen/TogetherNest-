@@ -58,6 +58,8 @@ class GroupsController < ApplicationController
 
   def find_group
     @group = Group.find(params[:id])
+  rescue ActiveRecord::RecordNotFound
+    redirect_to root_path
   end
 
   def authorize_access
@@ -70,5 +72,4 @@ class GroupsController < ApplicationController
   def group_params
     params.require(:group).permit(:name, :post_code)
   end
-
 end
