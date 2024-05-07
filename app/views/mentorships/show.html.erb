@@ -10,9 +10,7 @@
         <%= cl_image_tag current_user.photo.key, class: "mentor-info-avatar-lg" %>
       </div>
     </div>
-    <p>
-      Having a mentor can greatly benefit you in becoming a good and confident parent.
-    </p>
+    <p>Having a mentor can greatly benefit you in becoming a good and confident parent.</p>
     <p>
       A mentor provides a trusted source of guidance, support, and wisdom, offering valuable insights based on their own experiences and knowledge.
     </p>
@@ -22,17 +20,14 @@
     <p>
       Through their encouragement and feedback, a mentor empowers you to build confidence in your parenting abilities. Ultimately, having a mentor by your side can enhance your parenting journey, equipping you with the tools and encouragement needed to thrive as a parent.
     </p>
-    <p>
-      Continue below to join the mentorship program.
-    </p>
+    <p>Continue below to join the mentorship program.</p>
     <div class="mentor-info-btn-container">
-      <div class="mentor-info-btn-hp">
-        <%= link_to "Find a mentor", find_mentorship_path %>
-      </div>
+      <%= link_to "Find a mentor", find_mentorship_path, class: "mentor-info-btn-hp"%>
     </div>
-    <p>
-      Are you interested in becoming a Mentor yourself? Click <%= button_to "Become a mentor", join_mentorship_path %>
-    </p>
+    <p>Are you interested in becoming a Mentor yourself?</p>
+    <div class="mentor-info-btn-container">
+      <%= button_to "Be a mentor", join_mentorship_path, class: "mentor-info-btn-hp" %>
+     </div>
   </div>
 </div>
 

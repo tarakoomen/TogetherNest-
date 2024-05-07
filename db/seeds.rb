@@ -208,7 +208,7 @@ user = User.new(
   bio: 'Art lover. Wanderlust. Coffee snob.',
   due_date: '2024-10-05',
   post_code: '3002',
-  parent_experience: 1,
+  parent_experience: 2,
   is_mentor: true
 )
 file = URI.open('https://randomuser.me/api/portraits/women/56.jpg')
