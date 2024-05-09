@@ -22,6 +22,7 @@
 .mentor-card {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   background-color: rgba(250, 244, 215, 0.55);
   width: 210px;
@@ -91,6 +92,7 @@
     border-color: rgba(221, 221, 221, 0.693);
     text-decoration: none;
     text-align: center;
+    border: none;
     transition: background-color 0.5s ease, padding 0.5s ease, font-weight 0.5s ease, border-color 0.5s ease, border-radius 0.5s ease;
   }
 
