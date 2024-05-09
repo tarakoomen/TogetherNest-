@@ -66,7 +66,8 @@ class GroupsController < ApplicationController
     find_group
     return if @group.users.include?(current_user)
 
-    redirect_to root_path, notice: "You aren't a member of this group."
+    flash[:alert] = "You aren't a member of this group."
+    redirect_to root_path
   end
 
   def group_params
