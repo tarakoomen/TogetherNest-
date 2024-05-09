@@ -51,7 +51,7 @@ class GroupsController < ApplicationController
       end
       @group.destroy
     end
-    redirect_to root_path
+    redirect_to groups_path
   end
 
   def users
