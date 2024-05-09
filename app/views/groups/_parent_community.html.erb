@@ -1,55 +1,61 @@
-<div class="form-flexbox-lhs">
-  <div class="flex" style="display: flex; flex-direction: row; align-items: center;">
-    <div class="container group" data-controller="group-subscription" data-group-subscription-group-id-value="<%= @group.id %>" data-group-subscription-current-user-id-value="<%= current_user.id %>">
-      <h1 class="two-color-headline">notice<span class="nest-purple">board</span></h1>
-      <h2 class="two-color-sentence-sml"><%= @group.name %></h2>
-      <div class="messages" data-group-subscription-target="messages">
-        <% @group.messages.each do |message| %>
-          <div class="message-row d-flex <%= message.sender?(current_user) ? 'justify-content-end' : 'justify-content-start' %>">
-            <div class="<%= message.sender?(current_user) ? 'sender-style' : 'receiver-style' %>">
-              <%= render "messages/message", message: message %>
-            </div>
-          </div>
-        <% end %>
-      </div>
+<div class="dashboard-lhs-all">
+  <h2 class="two-color-sentence">together<span class="nest-purple">nest</span></h2>
+  <p class="sml-dashboard-title-purple"><%= @group.name.downcase %> / autumn 2024 bubs</p>
 
-      <%= simple_form_for [@group, @message],
-      html: { data: { action: "turbo:submit-end->group-subscription#resetForm" }, class: "d-flex" } do |f| %>
-      <%= f.input :content,
-        label: false,
-        placeholder: "Message ##{@group.name}",
-        wrapper_html: {class: "flex-grow-1"}
-      %>
-      <%= f.submit "send", class: "btn btn-primary mb-3" %>
-      <% end %>
+  <div class="dashboard-row">
+    <div class="placeholder-msg-box">
     </div>
 
-    <div class="flex" style="display: flex; flex-direction: row; align-items: center;">
-      <div class="row">
-        <div class="mentor-cta">
-          <div class="btn">
-            <%= link_to "members", users_group_path %>
-          </div>
-          <div class="btn">
-            <%= link_to "mentor program", mentorship_path %>
-          </div>
-        </div>
-          <!-- <div class="btn-join">
-            <% group_user = GroupUser.find_by(user_id: current_user.id, group_id: @group.id) %>
-            <% unless group_user %>
-            <div class="btn">
-              <%= link_to "Join Group", group_users_path(user: current_user, group: @group), data: { turbo_method: :post },onclick: 'alert("You have joined the group!");'%>
-            </div>
-            <% end %> -->
-          <div class="btn">
-            <%= link_to "Leave group", leave_group_path(@group),
-                data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to permanently leave this group?" },
-                class: "ms-3 text-danger" %>
-          </div>
+    <div>
+      <%= image_tag asset_path("vector-mentorship.svg") %>
+
+      <div class="mentorship-box">
+      <h2 class="two-color-sentence">mentor<span class="nest-purple">program</span></h2>
+      <p>Access our uniquely tailored mentorship opportunities <%= link_to "here", mentorship_path %></p>
+      </div>
+
+      <div class="directory-box">
+      <h2 class="two-color-sentence"><span class="nest-purple">directory</span></h2>
+      <p>See all the lovely people in your community group <%= link_to "here", users_group_path %></p>
+      </div>
+
+      <%= image_tag asset_path("vector-directory.svg") %>
+
+      <div class="links-box">
+          <%= link_to "Leave group", leave_group_path(@group),
+          data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to permanently leave this group?" }%>
       </div>
     </div>
   </div>
 </div>
+
+
+<%#  the precious below code needs to go up around line 6%>
+
+
+  <div class="group" data-controller="group-subscription" data-group-subscription-group-id-value="<%= @group.id %>" data-group-subscription-current-user-id-value="<%= current_user.id %>">
+    <h1 class="two-color-headline">notice<span class="nest-purple">board</span></h1>
+    <div class="messages" data-group-subscription-target="messages">
+      <% @group.messages.each do |message| %>
+        <div class="message-row d-flex <%= message.sender?(current_user) ? 'justify-content-end' : 'justify-content-start' %>">
+          <div class="<%= message.sender?(current_user) ? 'sender-style' : 'receiver-style' %>">
+            <%= render "messages/message", message: message %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+    <%= simple_form_for [@group, @message],
+    html: { data: { action: "turbo:submit-end->group-subscription#resetForm" }, class: "d-flex" } do |f| %>
+    <%= f.input :content,
+      label: false,
+      placeholder: "Message ##{@group.name}",
+      wrapper_html: {class: "flex-grow-1"}
+    %>
+    <%= f.submit "send", class: "btn btn-primary mb-3" %>
+    <% end %>
+  </div>
+
 
 <div class="tree-bg-dashboard">
 </div>

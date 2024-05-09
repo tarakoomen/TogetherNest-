@@ -35,8 +35,8 @@ p {
   font-optical-sizing: auto;
   font-weight: 300;
   letter-spacing: 0.05em;
-  margin-left: 35px;
-  margin-top: 12px;
+  margin-left: 40px;
+  margin-top: 0;
 }
 
   .btn {
@@ -71,4 +71,157 @@ p {
   display: flex;
   justify-content: center;
   margin-left: 10vw;
+}
+
+
+/* dashboard styling below - not icluding the messaging window styling which is above */
+
+
+.dashboard-lhs-all {
+  margin-left: 7vw;
+}
+
+.dashboard-row {
+  display: flex;
+  align-items: center;
+  margin-top: 25px;
+}
+
+
+.sml-dashboard-title-purple {
+  color: $tn-purple;
+  font-size: 19px;
+  font-family: "Montserrat";
+  font-optical-sizing: auto;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  margin-top: -19px;
+}
+
+
+.placeholder-msg-box {
+  background-color: rgba(255, 255, 255, 0.6);
+  height: 720px;
+  width: 700px;
+  border: 12px solid white;
+  border-radius: 25px;
+}
+
+.mentorship-box {
+  background: linear-gradient(to top, rgba(255, 187, 86, 0.9), rgba(225, 71, 238, 0.95));
+  height: 200px;
+  width: 480px;
+  border: 12px solid white;
+  border-radius: 25px;
+  margin-left: 45px;
+  padding: 15px;
+  box-shadow: 10px 10px 0 $tn-indigo;
+
+  .two-color-sentence-sml {
+    color: $tn-indigo;
+    font-size: 27px;
+    font-family: "Montserrat";
+    font-optical-sizing: auto;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    margin-bottom: 10px;
+  }
+
+  .nest-purple {
+    color: $tn-purple;
+    font-size: 27px;
+    font-family: "Montserrat";
+    font-optical-sizing: auto;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    margin-bottom: 10px;
+    margin-left: 4px;
+  }
+
+  p {
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 14px;
+    padding-left: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 0;
+    color: $tn-indigo;
+    font-family: "Montserrat";
+    font-size: 18px;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+  }
+
+  a {
+    text-decoration: none;
+    color: $tn-purple;
+    font-weight: 500;
+  }
+
+}
+
+.directory-box {
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 380px;
+  height: 160px;
+  border: 12px solid white;
+  border-radius: 25px;
+  padding: 6px 12px;
+  margin-top: 28px;
+  margin-left: 55px;
+
+  .two-color-sentence-sml {
+    color: $tn-indigo;
+    font-size: 19px;
+    font-family: "Montserrat";
+    font-optical-sizing: auto;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    margin-bottom: 0;
+  }
+
+  .nest-purple {
+    color: $tn-purple;
+    font-size: 22px;
+    font-family: "Montserrat";
+    font-optical-sizing: auto;
+    font-weight: 300;
+    letter-spacing: 0.15em;
+    margin-bottom: 0;
+  }
+
+  p {
+    margin-top: -12px;
+    color: $tn-indigo;
+    font-family: "Montserrat";
+    font-size: 18px;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+  }
+
+  a {
+    text-decoration: none;
+    color: $tn-purple;
+    font-weight: 500;
+  }
+
+}
+
+.links-box {
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 200px;
+  height: 80px;
+  border: 12px solid white;
+  border-radius: 25px;
+  margin-left: 245px;
+  padding: 15px;
+
+  a {
+    text-decoration: none;
+    color: $tn-purple;
+    font-weight: 500;
+    margin-left: 15px;
+  }
 }
