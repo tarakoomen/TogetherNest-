@@ -11,6 +11,7 @@
     <div class="parent-card">
       <%= cl_image_tag user.photo.key, class: "parent-avatar-lg"%>
       <h2><%= user.first_name %></h2>
+      <p><%= user.nickname %></p>
       <p><%= user.bio %></p>
     </div>
   <% end %>

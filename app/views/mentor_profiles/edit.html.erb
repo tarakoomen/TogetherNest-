@@ -7,19 +7,18 @@
 
       <div class="form-inputs">
 
-        <%= f.input :post_code,
+        <%= f.input :post_code, label: "Your postcode",
                     required: true,
                     as: :string,
                     input_html: { autocomplete: "postcode" }  %>
-        <%= f.input :parent_experience,
-                    hint: "Specify how many years you have been parenting",
+        <%= f.input :parent_experience, label: "How many years have you been parenting?",
                     required: true,
                     as: :string,
                     input_html: { autocomplete: "parent experience in years" } %>
-        <%= f.input :bio,
-                    hint: "A detailed bio makes it easier to match you to the right mentee.",
+        <%= f.input :bio, label: "A detailed bio to introduce yourself",
+                    hint: "Having a detailed bio makes it easier to match you to the right mentee.",
                     required: true,
-                    input_html: { autocomplete: "A detailed bio to introduce yourself" } %>
+                    input_html: { autocomplete: "bio" } %>
       </div>
 
       <div class="form-actions">

@@ -7,17 +7,18 @@
 
       <div class="form-inputs">
 
-        <%= f.input :due_date,
+        <%= f.input :due_date, label: "Your baby's due date or DOB",
                     required: true,
                     as: :string,
                     input_html: { autocomplete: "due date", class: "datepicker-input", data: { controller: "datepicker" } }  %>
-        <%= f.input :post_code,
+        <%= f.input :post_code, label: "Your postcode",
                     required: true,
                     as: :string,
                     input_html: { autocomplete: "postcode" } %>
-        <%= f.input :bio,
+        <%= f.input :bio, label: "A bio to introduce yourself",
+                    hint: "A detailed bio makes it easier to match you to the right group or mentor later on.",
                     required: true,
-                    input_html: { autocomplete: "short bio to introduce yourself" } %>
+                    input_html: { autocomplete: "bio" } %>
       </div>
 
       <div class="form-actions">
