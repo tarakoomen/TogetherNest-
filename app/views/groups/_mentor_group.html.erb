@@ -3,6 +3,10 @@
     <div class="container group" data-controller="group-subscription" data-group-subscription-group-id-value="<%= @group.id %>" data-group-subscription-current-user-id-value="<%= current_user.id %>">
       <h1 class="two-color-headline">notice<span class="nest-purple">board</span></h1>
       <h2 class="two-color-sentence-sml"><%= @group.name %></h2>
+      <h1><%= @group_chat_mentor.first_name %></h1>
+      <h1><%= @group_chat_mentor.nickname %></h1>
+      <h1><%= @group_chat_mentor.bio %></h1>
+
       <div class="messages" data-group-subscription-target="messages">
         <% @group.messages.each do |message| %>
           <div class="message-row d-flex <%= message.sender?(current_user) ? 'justify-content-end' : 'justify-content-start' %>">
@@ -24,20 +28,7 @@
       <% end %>
     </div>
 
-  <div class="flex" style="display: flex; flex-direction: row; align-items: center;">
-    <div class="row">
-      <div class="mentor-cta">
-        <div class="btn">
-          <%= link_to "members", users_group_path %>
-        </div>
-      </div>
-        <div class="btn">
-          <%= link_to "Leave mentor program", leave_group_path(@group),
-              data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to permanently leave the mentor program?" },
-              class: "ms-3 text-danger" %>
-        </div>
-      </div>
-    </div>
+
   </div>
 </div>
 

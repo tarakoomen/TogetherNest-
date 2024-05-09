@@ -25,6 +25,7 @@ class MentorshipsController < ApplicationController
   end
 
   def show
+    raise
     if current_user.mentor.present? || current_user.mentee.present?
       redirect_to current_user.groups.where(group_type: "mentor").first
     end
