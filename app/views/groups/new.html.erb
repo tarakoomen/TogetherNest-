@@ -1,15 +1,15 @@
 <div class="form-flexbox-lhs">
   <div class="white-form-rounded">
   <h2 class="two-color-headline">New<span class="nest-purple">parent community group</span></h2>
-  <p>Can't find the right match for you? There's always a solution at TogetherNest. Fill in this short form to create a new parent community group in your area. Then just wait for other parents to join the group. We look forward to welcoming you and other new members into the nest.</p>
+  <p>Can't find the right match for you? There's always a solution at TogetherNest. Fill in this short form to create a new parent community group in your area. Then just wait for other parents to join the group. We look forward to welcoming you and fellow new members into the nest.</p>
 
   <%= simple_form_for(@group) do |f| %>
     <%= f.error_notification %>
     <%= f.error_notification message: f.object.errors[:base].to_sentence if f.object.errors[:base].present? %>
 
     <div class="form-inputs">
-      <%= f.input :name %>
-      <%= f.input :post_code,
+      <%= f.input :name, label: "Your parent community group's name" %>
+      <%= f.input :post_code, label: "The postcode for your group's area",
                   as: :string,
                   required: true %>
     </div>
