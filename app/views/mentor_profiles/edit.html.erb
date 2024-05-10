@@ -1,7 +1,7 @@
 <div class="form-flexbox-rhs">
   <div class="white-form-rounded">
     <h2 class="two-color-headline">become a<span class="nest-purple">mentor</span></h2>
-    <p>To ensure we find your perfect match with a parent looking for a mentor, please share more about yourself in as much detail as possible. Your answers will enable us to match you seamlessly with a parent needing your expertise and guidance.</p>
+    <p>To ensure we find your perfect match with a parent looking for a mentor, please share more about yourself. Your answers will enable us to match you seamlessly with a parent needing your expertise and guidance.</p>
     <%= simple_form_for(current_user, as: :user, url: mentor_profile_path, html: { method: :patch }) do |f| %>
       <%= f.error_notification %>
 
