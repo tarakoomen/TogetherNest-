@@ -6,21 +6,21 @@
 
 // To style the message itself
 .sender-style, .receiver-style {
-  width: 70%;
-  max-width: 600px;
+  width: 78%;
+  max-width: 400px;
   border-radius: 12px;
-  padding: 12px;
+  padding: 9px;
   min-height: 80px;
 }
 
 .sender-style {
   background-color: white;
-  border-left: 8px solid $tn-indigo;
+  border-left: 10px solid $tn-indigo;
 }
 
 .receiver-style {
   background-color: white;
-  border-left: 8px solid $tn-purple;
+  border-left: 10px solid $tn-purple;
 }
 
 i {

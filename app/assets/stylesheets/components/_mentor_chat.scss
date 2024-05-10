@@ -1,0 +1,242 @@
+.mentor-msg-workaround {
+  background: linear-gradient(to top, rgba(255, 187, 86, 0.9), rgba(225, 71, 238, 0.95));
+  padding: 30px 30px;
+  padding-bottom: 0;
+  height: 720px;
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  border: 12px solid white;
+  border-radius: 25px;
+
+
+  .messages {
+    height: 100%;
+    overflow: scroll;
+  }
+
+  #new_message {
+    border-top: 1px solid white;
+    margin-top: 20px;
+    padding: 1rem;
+
+    .form-group {
+      margin-bottom: 0;
+    }
+  }
+
+  .two-color-sentence-sml {
+    color: $tn-indigo;
+    font-size: 30px;
+    font-family: "Montserrat";
+    font-optical-sizing: auto;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    margin-bottom: 15px;
+    margin-top: -16px;
+  }
+
+  .nest-purple-sml {
+    color: $tn-purple;
+    font-size: 30px;
+    font-family: "Montserrat";
+    font-optical-sizing: auto;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    margin-bottom: 15px;
+  }
+
+  p {
+    color: $tn-indigo;
+    font-family: "Montserrat";
+    font-size: 20px;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    margin-left: 40px;
+    margin-top: 0;
+  }
+
+  .btn {
+    color: $tn-purple;
+    background-color: rgb(243, 243, 243);
+    font-family: "Montserrat", sans-serif;
+    font-size: x-large;
+    font-weight: 300;
+    letter-spacing: 3px;
+    padding: 12px 30px;
+    margin-left: 9px;
+    border-radius: 13px;
+    border-width: 1px;
+    border-color: rgba(216, 216, 216, 0.693);
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.5s ease, padding 0.5s ease, font-weight 0.5s ease, border-color 0.5s ease, border-radius 0.5s ease;
+  }
+
+  .btn:hover {
+    background-color: rgba(255, 255, 255, 1);
+    font-weight: 400;
+    text-shadow: 1px 1px 4px rgba(206, 153, 250, 0.55);
+    border-width: 2px;
+    border-color: $tn-purple;
+    border-radius: 20px;
+  }
+}
+
+
+.mentor-chat-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to top, rgba(255, 187, 86, 0.9), rgba(225, 71, 238, 0.95));
+  width: 380px;
+  border: 11px solid white;
+  border-radius: 25px;
+  margin-left: 50px;
+  padding: 16px 22px;
+  box-shadow: 10px 10px 0 $tn-indigo;
+
+  .name-title {
+    color: $tn-indigo;
+    font-size: 38px;
+    text-align: center;
+    font-family: "Montserrat";
+    font-optical-sizing: auto;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .two-color-sentence-sml {
+    color: $tn-indigo;
+    font-size: 30px;
+    text-align: center;
+    font-family: "Montserrat";
+    font-optical-sizing: auto;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    margin-bottom: 12px;
+    margin-top: 0;
+  }
+
+  .nest-purple-sml {
+    color: $tn-purple;
+    font-size: 30px;
+    font-family: "Montserrat";
+    font-optical-sizing: auto;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    margin-bottom: 12px;
+    margin-left: 1px;
+  }
+
+  .sml-nickname {
+    color: $tn-purple;
+    font-size: 15px;
+    font-family: "Montserrat";
+    font-optical-sizing: auto;
+    font-weight: 400;
+    text-align: center;
+    letter-spacing: 0.1em;
+    margin-bottom: 10px;
+  }
+
+  p {
+    background-color: rgba(255, 255, 255, 0.781);
+    border-radius: 14px;
+    padding: 12px;
+    margin-bottom: 5px;
+    color: $tn-indigo;
+    font-family: "Montserrat";
+    font-size: 16px;
+    text-align: center;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+  }
+
+  a {
+    text-decoration: none;
+    color: $tn-purple;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    transition: font-weight 0.5s ease
+  }
+
+  a:hover {
+    text-decoration: none;
+    color: $tn-purple;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+  }
+
+}
+
+
+
+.return-box  {
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 200px;
+  height: 90px;
+  border: 12px solid white;
+  border-radius: 25px;
+  margin-left: 245px;
+  padding: 9px;
+  text-align: center;
+
+  a {
+    text-decoration: none;
+    color: $tn-purple;
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    transition: font-weight 0.5s ease
+  }
+
+  a:hover {
+    text-decoration: none;
+    text-align: center;
+    color: $tn-purple;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+
+  }
+}
+
+
+.move-up-115px {
+  margin-top: -115px;
+}
+
+.opt-out-box  {
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 160px;
+  height: 72px;
+  border: 12px solid white;
+  border-radius: 25px;
+  margin-left: 25px;
+  padding: 9px;
+
+  a {
+    text-decoration: none;
+    color: $tn-purple;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    margin-left: 15px;
+    transition: font-weight 0.5s ease
+  }
+
+  a:hover {
+    text-decoration: none;
+    color: $tn-purple;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    margin-left: 15px;
+  }
+}

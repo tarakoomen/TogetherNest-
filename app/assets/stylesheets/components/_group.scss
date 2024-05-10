@@ -28,16 +28,16 @@
   }
 
 
-p {
-  color: $tn-indigo;
-  font-family: "Montserrat";
-  font-size: 20px;
-  font-optical-sizing: auto;
-  font-weight: 300;
-  letter-spacing: 0.05em;
-  margin-left: 40px;
-  margin-top: 0;
-}
+  p {
+    color: $tn-indigo;
+    font-family: "Montserrat";
+    font-size: 20px;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    margin-left: 40px;
+    margin-top: 0;
+  }
 
   .btn {
     color: $tn-purple;
@@ -79,6 +79,8 @@ p {
 
 .dashboard-lhs-all {
   margin-left: 7vw;
+  width: 80%;
+  margin-bottom: 5%;
 }
 
 .dashboard-row {
@@ -98,44 +100,36 @@ p {
   margin-top: -19px;
 }
 
-
-.placeholder-msg-box {
-  background-color: rgba(255, 255, 255, 0.6);
-  height: 720px;
-  width: 700px;
-  border: 12px solid white;
-  border-radius: 25px;
-}
-
 .mentorship-box {
   background: linear-gradient(to top, rgba(255, 187, 86, 0.9), rgba(225, 71, 238, 0.95));
-  height: 200px;
-  width: 480px;
-  border: 12px solid white;
+  height: 170px;
+  width: 460px;
+  border: 11px solid white;
   border-radius: 25px;
-  margin-left: 45px;
-  padding: 15px;
+  margin-left: 65px;
+  padding: 12px 20px;
   box-shadow: 10px 10px 0 $tn-indigo;
 
   .two-color-sentence-sml {
     color: $tn-indigo;
-    font-size: 27px;
+    font-size: 30px;
     font-family: "Montserrat";
     font-optical-sizing: auto;
     font-weight: 300;
-    letter-spacing: 0.15em;
-    margin-bottom: 10px;
+    letter-spacing: 0.3em;
+    margin-bottom: 12px;
+    margin-top: 0;
   }
 
-  .nest-purple {
+  .nest-purple-sml {
     color: $tn-purple;
-    font-size: 27px;
+    font-size: 30px;
     font-family: "Montserrat";
     font-optical-sizing: auto;
     font-weight: 300;
-    letter-spacing: 0.15em;
-    margin-bottom: 10px;
-    margin-left: 4px;
+    letter-spacing: 0.3em;
+    margin-bottom: 12px;
+    margin-left: 1px;
   }
 
   p {
@@ -147,7 +141,7 @@ p {
     margin-bottom: 0;
     color: $tn-indigo;
     font-family: "Montserrat";
-    font-size: 18px;
+    font-size: 16px;
     font-optical-sizing: auto;
     font-weight: 300;
     letter-spacing: 0.05em;
@@ -156,7 +150,16 @@ p {
   a {
     text-decoration: none;
     color: $tn-purple;
-    font-weight: 500;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    transition: font-weight 0.5s ease
+  }
+
+  a:hover {
+    text-decoration: none;
+    color: $tn-purple;
+    font-weight: 600;
+    letter-spacing: 0.05em;
   }
 
 }
@@ -167,35 +170,42 @@ p {
   height: 160px;
   border: 12px solid white;
   border-radius: 25px;
-  padding: 6px 12px;
-  margin-top: 28px;
-  margin-left: 55px;
+  padding: 12px 20px;
+  margin-top: 35px;
+  margin-left: 25px;
 
   .two-color-sentence-sml {
     color: $tn-indigo;
-    font-size: 19px;
+    font-size: 30px;
     font-family: "Montserrat";
     font-optical-sizing: auto;
     font-weight: 300;
-    letter-spacing: 0.15em;
-    margin-bottom: 0;
+    letter-spacing: 0.3em;
+    margin-bottom: 12px;
+    margin-top: 0;
   }
 
-  .nest-purple {
+  .nest-purple-sml {
     color: $tn-purple;
-    font-size: 22px;
+    font-size: 30px;
     font-family: "Montserrat";
     font-optical-sizing: auto;
     font-weight: 300;
-    letter-spacing: 0.15em;
-    margin-bottom: 0;
+    letter-spacing: 0.3em;
+    margin-bottom: 12px;
+    margin-left: 1px;
   }
 
   p {
-    margin-top: -12px;
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: 14px;
+    padding-left: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 0;
     color: $tn-indigo;
     font-family: "Montserrat";
-    font-size: 18px;
+    font-size: 16px;
     font-optical-sizing: auto;
     font-weight: 300;
     letter-spacing: 0.05em;
@@ -204,7 +214,16 @@ p {
   a {
     text-decoration: none;
     color: $tn-purple;
-    font-weight: 500;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    transition: font-weight 0.5s ease
+  }
+
+  a:hover {
+    text-decoration: none;
+    color: $tn-purple;
+    font-weight: 600;
+    letter-spacing: 0.05em;
   }
 
 }
@@ -212,16 +231,114 @@ p {
 .links-box {
   background-color: rgba(255, 255, 255, 0.6);
   width: 200px;
-  height: 80px;
+  height: 72px;
   border: 12px solid white;
   border-radius: 25px;
   margin-left: 245px;
-  padding: 15px;
+  padding: 9px;
 
   a {
     text-decoration: none;
     color: $tn-purple;
-    font-weight: 500;
+    font-weight: 300;
+    letter-spacing: 0.1em;
     margin-left: 15px;
+    transition: font-weight 0.5s ease
+  }
+
+  a:hover {
+    text-decoration: none;
+    color: $tn-purple;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    margin-left: 15px;
+  }
+}
+
+
+.group-msg-workaround {
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 30px 30px;
+  padding-bottom: 0;
+  height: 720px;
+  width: 700px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+  border: 12px solid white;
+  border-radius: 25px;
+
+  .messages {
+    height: 100%;
+    overflow: scroll;
+  }
+
+  #new_message {
+    border-top: 1px solid white;
+    margin-top: 20px;
+    padding: 1rem;
+
+    .form-group {
+      margin-bottom: 0;
+    }
+  }
+
+  .two-color-sentence-sml {
+    color: $tn-indigo;
+    font-size: 30px;
+    font-family: "Montserrat";
+    font-optical-sizing: auto;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    margin-bottom: 15px;
+    margin-top: -16px;
+  }
+
+  .nest-purple-sml {
+    color: $tn-purple;
+    font-size: 30px;
+    font-family: "Montserrat";
+    font-optical-sizing: auto;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    margin-bottom: 15px;
+  }
+
+  p {
+    color: $tn-indigo;
+    font-family: "Montserrat";
+    font-size: 20px;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    margin-left: 40px;
+    margin-top: 0;
+  }
+
+  .btn {
+    color: $tn-purple;
+    background-color: rgb(243, 243, 243);
+    font-family: "Montserrat", sans-serif;
+    font-size: x-large;
+    font-weight: 300;
+    letter-spacing: 3px;
+    padding: 12px 30px;
+    margin-left: 9px;
+    border-radius: 13px;
+    border-width: 1px;
+    border-color: rgba(216, 216, 216, 0.693);
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.5s ease, padding 0.5s ease, font-weight 0.5s ease, border-color 0.5s ease, border-radius 0.5s ease;
+  }
+
+  .btn:hover {
+    background-color: rgba(255, 255, 255, 1);
+    font-weight: 400;
+    text-shadow: 1px 1px 4px rgba(206, 153, 250, 0.55);
+    border-width: 2px;
+    border-color: $tn-purple;
+    border-radius: 20px;
   }
 }
