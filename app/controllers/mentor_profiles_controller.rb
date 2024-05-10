@@ -1,6 +1,9 @@
 class MentorProfilesController < ApplicationController
   def edit
-    # current_user.parent_experience >= 2
+    # if current_user.parent_experience >= 2
+    # else
+    #   redirect_to root_path, alert: "You need at least 2 years of parent experience to create a mentor profile."
+    # end
   end
 
   def update
