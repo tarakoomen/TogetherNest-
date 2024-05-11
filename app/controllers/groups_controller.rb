@@ -26,8 +26,8 @@ class GroupsController < ApplicationController
   def show
     @group_type = @group.group_type
     if @group_type == "mentor"
-      group_user_ids = @group.group_users.map { | u | u.user_id }
-      @group_chat_mentor = User.where(id: group_user_ids, is_mentor: true).where.not(id: current_user).first
+      group_user_ids = @group.group_users.pluck(:user_id)
+      @group_chat_mentor = User.where(id: group_user_ids).excluding(current_user).first
     end
     @message = Message.new
   end
@@ -77,4 +77,9 @@ class GroupsController < ApplicationController
   def group_params
     params.require(:group).permit(:name, :post_code)
   end
+
+  def configure_navbar_visibility
+    @show_navbar = true
+  end
+
 end
