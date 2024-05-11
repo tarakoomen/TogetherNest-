@@ -1,5 +1,5 @@
-<div class="form-flexbox-rhs">
-  <div class="half-page">
+
+  <div class="two-columns">
     <h2 class="two-color-sentence">mentor<span class="nest-purple">program</span></h2>
     <div style="display: flex; align-items: center;">
       <div class="mentor-info-container">
@@ -21,18 +21,21 @@
     <div class="mentor-info-btn-container">
       <%= link_to "Find a mentor", find_mentorship_path, class: "mentor-info-btn-hp"%>
     </div>
-    <p>Are you interested in becoming a Mentor?</p>
-    <p>Guiding a new parent to become more confident in their parenting skills can be greatly rewarding.</p>
-    <p>
-      After having benefited from community and parenting support at Togethernest yourself, why not give back to the community and help someone else navigate the challenges of parenthood? You'll help us offer accessible support to parents in similar circumstances as you; support from parents for parents.
-    </p>
-    <p>We ask that you have at least two years experience as a parent to join Togethernest as a mentor.</p>
-    <p>Continue below to join the mentorship program as a mentor.</p>
-    <div class="mentor-info-btn-container">
-      <%= button_to "Be a mentor", join_mentorship_path, class: "mentor-info-btn-hp" %>
-     </div>
   </div>
-</div>
+    <div class="two-columns">
+      <p>Are you interested in becoming a Mentor?</p>
+      <p>Guiding a new parent to become more confident in their parenting skills can be greatly rewarding.</p>
+      <p>
+        After having benefited from community and parenting support at Togethernest yourself, why not give back to the community and help someone else navigate the challenges of parenthood? You'll help us offer accessible support to parents in similar circumstances as you; support from parents for parents.
+      </p>
+      <p>We ask that you have at least two years experience as a parent to join Togethernest as a mentor.</p>
+      <p>Continue below to join the mentorship program as a mentor.</p>
+      <div class="mentor-info-btn-container">
+        <%= button_to "Be a mentor", join_mentorship_path, class: "mentor-info-btn-hp" %>
+      </div>
+    </div>
+  </div>
+
 
 <div class="tree-bg-mentor-info">
 </div>
