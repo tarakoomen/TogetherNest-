@@ -2,6 +2,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   before_action :authenticate_user!
   before_action :configure_permitted_parameters, if: :devise_controller?
+  before_action :configure_navbar_visibility
 
   protected
 
@@ -17,4 +18,9 @@ class ApplicationController < ActionController::Base
       super
     end
   end
+
+  def configure_navbar_visibility
+    @show_navbar = false
+  end
+
 end

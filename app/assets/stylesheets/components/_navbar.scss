@@ -1,16 +1,15 @@
 .navbar-lewagon {
-  justify-content: space-between;
-  margin-left: 5.4vw;
-  margin-right: 5.4vw;
+  margin-right: 1.5vh;
+  margin-top: 1.5vh;
 }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
-  height: 40px;
+.tn-nav-avatar {
+  height: 45px;
+  width: 45px;
   border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.655);
+  border: 7px white;
 }
