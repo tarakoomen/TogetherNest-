@@ -27,7 +27,7 @@ class GroupsController < ApplicationController
     @group_type = @group.group_type
     if @group_type == "mentor"
       group_user_ids = @group.group_users.map { | u | u.user_id }
-      @group_chat_mentor = User.where(id: group_user_ids, is_mentor: true).where.not(id: current_user).first
+      @group_chat_mentor = User.where(id: group_user_ids).where.not(id: current_user).first
     end
     @message = Message.new
   end
