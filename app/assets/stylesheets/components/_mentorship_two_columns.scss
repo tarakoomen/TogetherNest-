@@ -1,9 +1,18 @@
-.two-columns {
+.mentor-row {
   display: flex;
-  margin-left: 30vw;
-  width: 300px;
-  margin-bottom: 10vh;
-  transform: scale(0.80);
+  // flex-wrap: wrap;
+  justify-content: flex-end;
+  margin-left: 40%;
+  padding-right: 12%;
+  margin-bottom: 3%;
+
+.column {
+   display: flex;
+   flex-direction: column;
+   flex: 1;
+  align-items: center;
+  padding: 25px;
+}
 
   p {
     color: $tn-indigo;
@@ -18,6 +27,18 @@
     color: $tn-purple;
     font-weight: 400;
   }
+}
+
+.mentor-heading {
+  margin-left: 40%;
+  display: flex;
+  justify-content: center;
+  padding-right: 12%;
+
+.mentor-info {
+  display: flex;
+  justify-content: center;
+}
 }
 
 .btn-hp {
