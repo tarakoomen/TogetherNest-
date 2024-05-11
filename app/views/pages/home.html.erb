@@ -7,7 +7,15 @@
     <div id="logo-tagline">
       <h1>together<span class="nest">nest</span></h1>
       <p>Guiding and supporting new parents through thoughtfully<br>curated online communities and mentorships</p>
-      <h2><%= link_to "Log in", new_user_session_path %> | <%= link_to "Sign up", new_user_registration_path %></h2>
+      <% if current_user && current_user.groups.where(group_type: "parent community").first %>
+        <h2><%= link_to "dashboard", group_path(current_user.groups.where(group_type: "parent community").first) %> | <%= link_to 'log out', destroy_user_session_path, data: {turbo_method: :delete} %></h2>
+      <% elsif current_user %>
+        <h2><%= link_to "dashboard", groups_path %> |<%= link_to 'log out', destroy_user_session_path, data: {turbo_method: :delete} %></h2>
+
+      <% else %>
+        <h2><%= link_to "log in", new_user_session_path %> | <%= link_to "sign up", new_user_registration_path %></h2>
+      <% end %>
+
     </div>
   </div>
 </div>
