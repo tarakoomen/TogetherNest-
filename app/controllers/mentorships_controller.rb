@@ -18,7 +18,7 @@ class MentorshipsController < ApplicationController
     mentor_user = User.find(params[:mentor_id])
     current_user.update(mentor: mentor_user)
     mentor_user.update(mentee: current_user)
-    mentor_group = Group.create(name: "mentor chat", group_type: "mentor", post_code: nil)
+    mentor_group = Group.create(name: "mentor/mentoree private chat", group_type: "mentor", post_code: nil)
     mentor_group.users << mentor_user
     mentor_group.users << current_user
     redirect_to mentor_group
