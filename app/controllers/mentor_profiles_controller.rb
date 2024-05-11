@@ -1,16 +1,13 @@
 class MentorProfilesController < ApplicationController
   def edit
-    # if current_user.parent_experience >= 2
-    # else
-    #   redirect_to root_path, alert: "You need at least 2 years of parent experience to create a mentor profile."
-    # end
   end
 
   def update
-    if current_user.update(mentor_params)
+    if mentor_params[:parent_experience].to_i >= 2 && current_user.update(mentor_params)
       redirect_to group_path(current_user.groups.where(group_type: "parent community").first), notice: "Your answers have been succesfully saved", status: :see_other
     else
-      render :edit, status: :unprocessable_entity
+      flash[:alert] = "You need at least 2 years of parenting experience to create a mentor profile."
+      redirect_to edit_mentor_profile_path
     end
   end
 

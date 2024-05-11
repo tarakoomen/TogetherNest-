@@ -40,18 +40,19 @@ class GroupsController < ApplicationController
   def leave
     if @group.group_type == "parent community"
       current_user.groups.delete(@group)
+      redirect_to groups_path
     else
       if current_user.is_mentor?
-        current_user.mentee.update(mentor: nil)
+        current_user.mentee&.update(mentor: nil)
         current_user.update(mentee: nil)
       end
       unless current_user.is_mentor?
-        current_user.mentor.update(mentee: nil)
+        current_user.mentor&.update(mentee: nil)
         current_user.update(mentor: nil)
       end
       @group.destroy
+      redirect_to root_path
     end
-    redirect_to groups_path
   end
 
   def users

@@ -1,0 +1,51 @@
+.two-columns {
+  display: flex;
+  margin-left: 30vw;
+  width: 300px;
+  margin-bottom: 10vh;
+  transform: scale(0.80);
+
+  p {
+    color: $tn-indigo;
+    font-family: "Montserrat";
+    font-optical-sizing: auto;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+  }
+
+  a {
+    text-decoration: none;
+    color: $tn-purple;
+    font-weight: 400;
+  }
+}
+
+.btn-hp {
+  a {
+  display: inline-block;
+  color: $tn-purple;
+  background-color: rgba(255, 255, 255, 0.658);
+  font-family: "Montserrat", sans-serif;
+  font-size: xx-large;
+  font-weight: 100;
+  letter-spacing: 3px;
+  padding: 12px 30px;
+  margin-top: 9px;
+  margin-bottom: 28px;
+  border-radius: 13px;
+  border-width: 2px;
+  border-color: rgb(255, 255, 255);
+  text-decoration: none;
+  text-align: center;
+  transition: background-color 0.5s ease, padding 0.5s ease, font-weight 0.5s ease, border-color 0.5s ease, border-radius 0.5s ease;
+  }
+
+  a:hover {
+    background-color: rgba(255, 255, 255, 1);
+    font-weight: 200;
+    text-shadow: 1px 1px 4px rgba(206, 153, 250, 0.55);
+    border-width: 2px;
+    border-color: $tn-purple;
+    border-radius: 20px;
+  }
+}
