@@ -1,7 +1,7 @@
 class User < ApplicationRecord
-  has_many :messages
+  has_many :messages, dependent: :destroy
   has_many :group_users
-  has_many :groups, through: :group_users
+  has_many :groups, through: :group_users, dependent: :destroy
   belongs_to :mentor, class_name: "User", optional: true
   has_one :mentee, class_name: "User", foreign_key: :mentee_id
 
