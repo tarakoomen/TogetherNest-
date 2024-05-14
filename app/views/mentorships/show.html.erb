@@ -3,14 +3,14 @@
     <div class="hands-title">
       <div class="hands">
           <%= cl_image_tag current_user.photo.key, class: "mentor-info-avatar-lg" %>
-          <%= image_tag asset_path("hands.svg"), style: "width: 160px; margin-top: -26px;" %>
+          <%= image_tag asset_path("hands.svg"), style: "width: 100px; margin-top: -12px;" %>
       </div>
       <h2 class="two-color-sentence">mentor<span class="nest-purple">program</span></h2>
     </div>
     </div>
 
 
-    <div class="columns-cotainer">
+    <div class="columns-container">
     <div class="column">
       <p>Having a mentor can greatly benefit you in becoming a good and confident parent.</p>
       <p>
@@ -35,7 +35,7 @@
       </div>
 
 
-        <div class="columns-cotainer">
+        <div class="columns-container">
 
         <div class="mentor-info-btn-container">
         <%= link_to "find a mentor", find_mentorship_path, class: "mentor-info-btn-hp"%>
