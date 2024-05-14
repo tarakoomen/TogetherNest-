@@ -81,6 +81,9 @@ puts 'Creating parent community groups...'
 sydney_group = Group.create(name: 'Sydney parent group', group_type: 'parent community', post_code: 2000)
 melbourne_group = Group.create(name: 'Melbourne parent group', group_type: 'parent community', post_code: 3000)
 brisbane_group = Group.create(name: 'Brisbane parent group', group_type: 'parent community', post_code: 4000)
+melbourne_south_east_group = Group.create(name: 'Melbourne southeast group', group_type: 'parent community', post_code: 3162)
+melbourne_north_west_group = Group.create(name: 'Melbourne northwest group', group_type: 'parent community', post_code: 3043)
+
 
 puts 'Creating private messaging groups...'
 # Private Messaging Groups
