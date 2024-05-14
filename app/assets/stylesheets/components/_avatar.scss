@@ -11,11 +11,12 @@
   border-radius: 50%;
 }
 .avatar-bordered {
-  width: 40px;
+  width: 65px;
   border-radius: 50%;
-  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
-  border: white 1px solid;
+  border: white 4px solid;
+  box-shadow: 4px 4px 0px $tn-indigo;
 }
+
 .avatar-square {
   width: 40px;
   border-radius: 0px;
@@ -74,8 +75,8 @@
 }
 
 .mentor-info-avatar-lg {
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   object-fit: cover;
   border-radius: 50%;
   border: white 4px solid;

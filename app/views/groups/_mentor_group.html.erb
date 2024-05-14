@@ -30,7 +30,7 @@
 
       <div class="mentor-chat-card">
       <h2 class="two-color-sentence-sml">mentor<span class="nest-purple-sml">program</span></h2>
-      <p>This is your dedicated and private mentor space.<br>A safe space for you to communicate 1-on-1 with <%= @group_chat_mentor.first_name %></p>
+      <p>This is a dedicated and private space for you to communicate <br> 1-on-1 with <%= @group_chat_mentor.first_name %></p>
       <%= cl_image_tag @group_chat_mentor.photo.key, class: "mentor-chat-avatar" %>
       <h1 class="name-title"><%= @group_chat_mentor.first_name %></h1>
       <h5 class="sml-nickname"><%= @group_chat_mentor.nickname %></h5>
@@ -39,7 +39,7 @@
       <%= image_tag asset_path("vector-directory.svg") %>
 
       <div class="return-box">
-        <%= link_to "Community dashboard", :back %>
+        <%= link_to "Community dashboard", group_path(current_user.groups.where(group_type: "parent community").first) %>
       </div>
 
       <div class="move-up-115px">

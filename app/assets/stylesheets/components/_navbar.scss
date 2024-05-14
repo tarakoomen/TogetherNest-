@@ -1,15 +1,36 @@
 .navbar-lewagon {
-  margin-right: 1.5vh;
-  margin-top: 1.5vh;
+  margin-right: 3vw;
+  margin-top: 1.7vh;
+  margin-bottom: -3vh;
 }
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
 
-.tn-nav-avatar {
-  height: 45px;
-  width: 45px;
-  border-radius: 50%;
-  border: 7px white;
+.dropdown-menu.dropdown-menu-end {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 25px;
+  box-shadow: 4px 4px 0 $tn-indigo;
+  border-width: 0;
+  margin-top: 1.5vh;
+  margin-right: -.5vw;
+  padding: 15px;
+
+
+  .dropdown-item {
+    font-family: "Montserrat", sans-serif;
+    color: $tn-indigo;
+    font-weight: 300;
+  }
+
+  .dropdown-item:hover {
+    font-family: "Montserrat", sans-serif;
+    color: $tn-purple;
+    font-weight: 600;
+    text-shadow: 2px 2px 7px rgba(242, 141, 255, 0.673);
+    background-color: rgba(255, 255, 255, 0.118);
+    transition: color 0.75s ease, font-weight 0.75s ease, text-shadow 0.75s ease;
+  }
+
 }
