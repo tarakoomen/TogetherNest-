@@ -7,6 +7,7 @@ class Group < ApplicationRecord
   validates :group_type, presence: true
   validate :valid_group_types
   validates :post_code, presence: true, if: :parent_community?
+  validates :due_date, presence: true, if: :parent_community?
 
   private
 
