@@ -39,7 +39,7 @@
       <%= image_tag asset_path("vector-directory.svg") %>
 
       <div class="return-box">
-        <%= link_to "Community dashboard", :back %>
+        <%= link_to "Community dashboard", group_path(current_user.groups.where(group_type: "parent community").first) %>
       </div>
 
       <div class="move-up-115px">
