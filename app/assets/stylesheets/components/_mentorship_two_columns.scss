@@ -5,14 +5,9 @@
   margin-left: 40%;
   padding-right: 12%;
   margin-bottom: 3%;
+}
 
 .column {
-   display: flex;
-   flex-direction: column;
-   flex: 1;
-  align-items: center;
-  padding: 25px;
-}
 
   p {
     color: $tn-indigo;
@@ -20,6 +15,9 @@
     font-optical-sizing: auto;
     font-weight: 400;
     letter-spacing: 0.1em;
+    width: 400px;
+    margin-right: 45px;
+    margin-bottom: 7px;
   }
 
   a {
@@ -29,11 +27,10 @@
   }
 }
 
+
 .mentor-heading {
-  margin-left: 40%;
   display: flex;
   justify-content: center;
-  padding-right: 12%;
 
 .mentor-info {
   display: flex;
@@ -54,7 +51,7 @@
   margin-top: 9px;
   margin-bottom: 28px;
   border-radius: 13px;
-  border-width: 2px;
+  border-width: 0;
   border-color: rgb(255, 255, 255);
   text-decoration: none;
   text-align: center;
@@ -65,7 +62,7 @@
     background-color: rgba(255, 255, 255, 1);
     font-weight: 200;
     text-shadow: 1px 1px 4px rgba(206, 153, 250, 0.55);
-    border-width: 2px;
+    border-width: 0;
     border-color: $tn-purple;
     border-radius: 20px;
   }
