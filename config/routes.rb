@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   resource :mentorship do
     post :join
     get :find
-    get :mentor
+    get :mentor_message
   end
 
   resource :group_users, only: [:create, :destroy]

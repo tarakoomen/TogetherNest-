@@ -27,8 +27,8 @@ class MentorshipsController < ApplicationController
   def show
     if current_user.mentor.present? || current_user.mentee.present?
       redirect_to current_user.groups.where(group_type: "mentor").first
-    # elsif current_user.mentor.present? || current_user.mentee.nil?
-    #   redirect_to mentor_mentorship_path
+    elsif current_user.is_mentor == true && current_user.mentee.nil?
+      redirect_to mentor_message_mentorship_path
     else
       render :show
     end
