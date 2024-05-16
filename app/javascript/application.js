@@ -10,46 +10,48 @@ document.addEventListener("DOMContentLoaded", function() {
   // Select the element with the tree-hp class
   var treeHp = document.getElementById("tree-hp");
 
-  // Apply wobbling effect with rotation from bottom and swaying from left to right
+  // Apply wobbling effect with rotation from bottom and subtly varied swaying
   function wobble(element) {
       var angle = 0;
-      var swayCount = 0; // Count the number of sways
-      var maxSwayCount = 6; // Number of times to sway
-      var swayDirection = 1; // Initial sway direction
 
       var wobbleInterval = setInterval(function() {
           // Adjust the wobbling speed by changing the increment value
-          angle += 1;
+          angle += 0.8 + Math.random() * 0.4; // Adding randomness to the increment value
           // Adjust the range of rotation
-          var rotation = Math.sin(angle * Math.PI / 180) * 0.85;
+          var rotation = Math.sin(angle * Math.PI / 180) * 0.9;
 
-          // Check if sway count has reached the limit
-          if (swayCount < maxSwayCount) {
-              // Apply swaying motion
-              element.style.transformOrigin = "bottom"; // Set the rotation origin to bottom
-              element.style.transform = "rotate(" + rotation + "deg)";
-          } else {
-              // If sway count reached the limit, stop the interval
-              clearInterval(wobbleInterval);
-              // Reset the rotation after wobbling
-              element.style.transformOrigin = ""; // Reset the rotation origin
-              element.style.transform = "rotate(0deg)";
-          }
+          // Apply swaying motion
+          element.style.transformOrigin = "bottom"; // Set the rotation origin to bottom
+          element.style.transform = "rotate(" + rotation + "deg)";
 
           // Change sway direction after each complete cycle (left to right)
           if (angle >= 360) {
-              swayDirection *= -1; // Reverse sway direction
               angle = 0; // Reset angle for next sway
-              swayCount++; // Increment sway count
           }
       }, 20); // Adjust the wobbling frequency by changing the interval duration
+
+      return wobbleInterval; // Return the interval ID
   }
 
-  // Call the wobble function with a delay of 1.5 seconds
-  setTimeout(function() {
-      wobble(treeHp);
-  }, 1500); // 1500 milliseconds = 1.5 seconds
+  // Function to start the wobble effect
+  function startWobble() {
+      // Call the wobble function and store the interval ID
+      var intervalID = wobble(treeHp);
+
+      // Listen for visibility change events
+      document.addEventListener("visibilitychange", function() {
+          // If the page becomes visible, start a new wobble effect
+          if (!document.hidden) {
+              clearInterval(intervalID); // Clear the previous interval
+              intervalID = wobble(treeHp); // Start a new wobble effect
+          }
+      });
+  }
+
+  // Call the startWobble function immediately
+  startWobble();
 });
+
 
 
 
@@ -65,8 +67,8 @@ document.addEventListener("DOMContentLoaded", function() {
   // Function to stretch the content horizontally and then scale back
   function stretchAndScale(element) {
       var initialWidth = 200; // Initial width in percent (200%)
-      var finalWidth = 100; // Final width in percent (100%)
-      var duration = 12000; // Animation duration in milliseconds (adjust as needed)
+      var finalWidth = 120; // Final width in percent (100%)
+      var duration = 15000; // Animation duration in milliseconds (adjust as needed)
       var startTime = performance.now(); // Get the start time
 
       // Animation loop
