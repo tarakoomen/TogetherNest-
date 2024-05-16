@@ -76,7 +76,7 @@ class GroupsController < ApplicationController
   end
 
   def group_params
-    params.require(:group).permit(:name, :post_code)
+    params.require(:group).permit(:name, :post_code, :due_date)
   end
 
   def configure_navbar_visibility
