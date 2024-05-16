@@ -68,7 +68,7 @@ user_bios = [
   "Art lover. Nature enthusiast. Coffee addict.",
   "Fashion lover. Foodie. Traveler.",
   "Gamer. Anime fan. Pizza enthusiast.",
-  "Sports fanatic. Dog lover. BBQ enthusiast.",
+  "I have two children. My daughter is 2 and my son is 4. My hobbies are yoga and surfing.",
   "Entrepreneur. Fitness enthusiast. Coffee addict.",
   "Minimalist. Environmentalist. Adventure lover.",
   "Poetry enthusiast. Coffee addict. Dreamer.",
@@ -993,15 +993,15 @@ file = URI.open('https://randomuser.me/api/portraits/women/19.jpg')
 user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
 user.save!
 user = User.new(
-  email: 'concepcion.collazo@example.com',
-  password: '83f9fd1226ca804a',
-  first_name: 'Concepción',
-  last_name: 'Collazo',
-  nickname: 'silverzebra740',
-  bio: 'Gamer. Anime fan. Pizza enthusiast.',
-  due_date: '2025-01-20',
-  post_code: '2000',
-  parent_experience: 0
+  email: 'rubyonrails@example.com',
+  password: '4760dda2b293b978',
+  first_name: 'Ruby',
+  last_name: 'Railson',
+  nickname: 'whiterabbit584',
+  bio: 'I have a 2 year old daughter and a 4 year old son. My hobbies are surfing and yoga. Every morning I take a walk along the beach with my children.',
+  due_date: '2022-11-29',
+  post_code: '3004',
+  parent_experience: 4
 )
 file = URI.open('https://randomuser.me/api/portraits/women/87.jpg')
 user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
