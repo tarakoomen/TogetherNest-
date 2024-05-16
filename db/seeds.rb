@@ -68,7 +68,7 @@ user_bios = [
   "Art lover. Nature enthusiast. Coffee addict.",
   "Fashion lover. Foodie. Traveler.",
   "Gamer. Anime fan. Pizza enthusiast.",
-  "Sports fanatic. Dog lover. BBQ enthusiast.",
+  "I have two children. My daughter is 2 and my son is 4. My hobbies are yoga and surfing.",
   "Entrepreneur. Fitness enthusiast. Coffee addict.",
   "Minimalist. Environmentalist. Adventure lover.",
   "Poetry enthusiast. Coffee addict. Dreamer.",
@@ -81,8 +81,8 @@ puts 'Creating parent community groups...'
 sydney_group = Group.create(name: 'Sydney parent group', group_type: 'parent community', post_code: 2000, due_date: "autumn 2024")
 melbourne_group = Group.create(name: 'Melbourne parent group', group_type: 'parent community', post_code: 3000, due_date: "autumn 2024")
 brisbane_group = Group.create(name: 'Brisbane parent group', group_type: 'parent community', post_code: 4000, due_date: "autumn 2024")
-melbourne_south_east_group = Group.create(name: 'Melbourne southeast group', group_type: 'parent community', post_code: 3162, due_date: "winter 2024")
-melbourne_north_west_group = Group.create(name: 'Melbourne northwest group', group_type: 'parent community', post_code: 3043, due_date: "summer 2022")
+south_yarra_group = Group.create(name: 'Sth Yarra parent group', group_type: 'parent community', post_code: 3120, due_date: "winter 2024")
+richmond_group = Group.create(name: 'Richmond parent group', group_type: 'parent community', post_code: 3121, due_date: "summer 2022")
 
 puts 'Creating private messaging groups...'
 # Private Messaging Groups
@@ -107,14 +107,14 @@ user = User.new(
   nickname: 'goldenlion888',
   bio: 'Coffee enthusiast. Cat lover. Netflix binger.',
   due_date: '2024-09-14',
-  post_code: '2005',
+  post_code: '3000',
   parent_experience: 8,
   is_mentor: true
 )
 file = URI.open('https://randomuser.me/api/portraits/women/73.jpg')
 user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
 user.save!
-sydney_group.users << user
+richmond_group.users << user
 
 user = User.new(
   email: 'vojislava.majstorovic@example.com',
@@ -124,14 +124,14 @@ user = User.new(
   nickname: 'purplebear715',
   bio: 'Tech geek by day, foodie by night.',
   due_date: '2025-04-06',
-  post_code: '2003',
+  post_code: '3000',
   parent_experience: 4,
   is_mentor: true
 )
 file = URI.open('https://randomuser.me/api/portraits/women/39.jpg')
 user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
 user.save!
-sydney_group.users << user
+richmond_group.users << user
 
 user = User.new(
   email: 'hazel.lawrence@example.com',
@@ -141,14 +141,14 @@ user = User.new(
   nickname: 'smallladybug208',
   bio: 'Dreamer, believer, achiever.',
   due_date: '2025-03-19',
-  post_code: '2000',
+  post_code: '3121',
   parent_experience: 7,
   is_mentor: true
 )
 file = URI.open('https://randomuser.me/api/portraits/women/2.jpg')
 user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
 user.save!
-sydney_group.users << user
+richmond_group.users << user
 
 user = User.new(
   email: 'bella.stewart@example.com',
@@ -158,14 +158,14 @@ user = User.new(
   nickname: 'bigtiger457',
   bio: 'Bookworm. Adventure seeker. Tea addict.',
   due_date: '2024-05-30',
-  post_code: '2006',
+  post_code: '3121',
   parent_experience: 3,
   is_mentor: true
 )
 file = URI.open('https://randomuser.me/api/portraits/women/68.jpg')
 user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
 user.save!
-sydney_group.users << user
+richmond_group.users << user
 
 user = User.new(
   email: 'thea.rasmussen@example.com',
@@ -175,14 +175,14 @@ user = User.new(
   nickname: 'angrygoose810',
   bio: 'Music junkie. Pizza aficionado. Outdoor enthusiast.',
   due_date: '2024-09-22',
-  post_code: '2002',
+  post_code: '3000',
   parent_experience: 7,
   is_mentor: true
 )
 file = URI.open('https://randomuser.me/api/portraits/women/41.jpg')
 user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
 user.save!
-sydney_group.users << user
+richmond_group.users << user
 
 user = User.new(
   email: 'matilda.tikkanen@example.com',
@@ -192,14 +192,14 @@ user = User.new(
   nickname: 'lazycat570',
   bio: 'Fitness freak. Dog person. DIY enthusiast.',
   due_date: '2024-11-13',
-  post_code: '3002',
+  post_code: '3000',
   parent_experience: 3,
   is_mentor: true
 )
 file = URI.open('https://randomuser.me/api/portraits/women/14.jpg')
 user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
 user.save!
-melbourne_group.users << user
+richmond_group.users << user
 
 user = User.new(
   email: 'eva.turner@example.com',
@@ -209,14 +209,14 @@ user = User.new(
   nickname: 'redcat850',
   bio: 'Art lover. Wanderlust. Coffee snob.',
   due_date: '2024-10-05',
-  post_code: '3002',
+  post_code: '3000',
   parent_experience: 2,
   is_mentor: true
 )
 file = URI.open('https://randomuser.me/api/portraits/women/56.jpg')
 user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
 user.save!
-melbourne_group.users << user
+richmond_group.users << user
 
 user = User.new(
   email: 'sofia.daniels@example.com',
@@ -226,14 +226,14 @@ user = User.new(
   nickname: 'happymeercat934',
   bio: 'Fashionista. Food blogger. Beach bum.',
   due_date: '2024-12-31',
-  post_code: '3006',
+  post_code: '3000',
   parent_experience: 7,
   is_mentor: true
 )
 file = URI.open('https://randomuser.me/api/portraits/women/46.jpg')
 user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
 user.save!
-melbourne_group.users << user
+richmond_group.users << user
 
 user = User.new(
   email: 'dorle.burkart@example.com',
@@ -243,14 +243,14 @@ user = User.new(
   nickname: 'goldendog306',
   bio: 'Movie buff. Wine connoisseur. Nature lover.',
   due_date: '2025-03-19',
-  post_code: '3005',
+  post_code: '3000',
   parent_experience: 8,
   is_mentor: true
 )
 file = URI.open('https://randomuser.me/api/portraits/women/90.jpg')
 user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
 user.save!
-melbourne_group.users << user
+richmond_group.users << user
 
 user = User.new(
   email: 'zakaria.wopereis@example.com',
@@ -260,14 +260,14 @@ user = User.new(
   nickname: 'redlion274',
   bio: 'Photography enthusiast. Foodie. Travel addict.',
   due_date: '2024-07-11',
-  post_code: '3010',
+  post_code: '3000',
   parent_experience: 6,
   is_mentor: true
 )
 file = URI.open('https://randomuser.me/api/portraits/women/23.jpg')
 user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
 user.save!
-melbourne_group.users << user
+richmond_group.users << user
 
 puts 'Creating 50 parent users...'
 # 50 parent users
@@ -424,13 +424,13 @@ user = User.new(
   nickname: 'crazypanda479',
   bio: 'Bookworm. Coffee addict. Wanderlust.',
   due_date: '2024-04-28',
-  post_code: '3019',
+  post_code: '3141',
   parent_experience: 0
 )
 file = URI.open('https://randomuser.me/api/portraits/women/22.jpg')
 user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
 user.save!
-brisbane_group.users << user
+south_yarra_group.users << user
 
 user = User.new(
   email: 'rebecca.hestetun@example.com',
@@ -440,13 +440,13 @@ user = User.new(
   nickname: 'beautifulkoala469',
   bio: 'Movie buff. Pizza lover. Cat person.',
   due_date: '2024-09-28',
-  post_code: '3020',
+  post_code: '3141',
   parent_experience: 0
 )
 file = URI.open('https://randomuser.me/api/portraits/women/94.jpg')
 user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
 user.save!
-brisbane_group.users << user
+south_yarra_group.users << user
 
 user = User.new(
   email: 'sarah.clarke@example.com',
@@ -456,13 +456,13 @@ user = User.new(
   nickname: 'sadbird550',
   bio: 'Art lover. Nature enthusiast. Coffee addict.',
   due_date: '2024-07-11',
-  post_code: '3021',
+  post_code: '3141',
   parent_experience: 0
 )
 file = URI.open('https://randomuser.me/api/portraits/women/36.jpg')
 user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
 user.save!
-brisbane_group.users << user
+south_yarra_group.users << user
 
 user = User.new(
   email: 'anzhelika.gaydamaha@example.com',
@@ -472,12 +472,14 @@ user = User.new(
   nickname: 'goldendog902',
   bio: 'Fashion lover. Foodie. Traveler.',
   due_date: '2025-01-07',
-  post_code: '3012',
+  post_code: '3141',
   parent_experience: 0
 )
 file = URI.open('https://randomuser.me/api/portraits/women/48.jpg')
 user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
 user.save!
+south_yarra_group.users << user
+
 user = User.new(
   email: 'amy.sollid@example.com',
   password: 'a9ccccec77a3ff4d',
@@ -486,12 +488,14 @@ user = User.new(
   nickname: 'organicmeercat223',
   bio: 'Gamer. Anime fan. Pizza enthusiast.',
   due_date: '2024-10-06',
-  post_code: '3000',
+  post_code: '3141',
   parent_experience: 0
 )
 file = URI.open('https://randomuser.me/api/portraits/women/6.jpg')
 user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
 user.save!
+south_yarra_group.users << user
+
 user = User.new(
   email: 'byt.glshn@example.com',
   password: '8c6d0352a3919c04',
@@ -570,12 +574,14 @@ user = User.new(
   nickname: 'bigzebra597',
   bio: 'Tech geek. Music lover. Coffee enthusiast.',
   due_date: '2024-06-25',
-  post_code: '3021',
+  post_code: '3120',
   parent_experience: 0
 )
 file = URI.open('https://randomuser.me/api/portraits/women/34.jpg')
 user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
 user.save!
+south_yarra_group.users << user
+
 user = User.new(
   email: 'dragica.dasilva@example.com',
   password: '07cfc04038c85617',
@@ -992,18 +998,19 @@ file = URI.open('https://randomuser.me/api/portraits/women/19.jpg')
 user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
 user.save!
 user = User.new(
-  email: 'concepcion.collazo@example.com',
-  password: '83f9fd1226ca804a',
-  first_name: 'Concepción',
-  last_name: 'Collazo',
-  nickname: 'silverzebra740',
-  bio: 'Gamer. Anime fan. Pizza enthusiast.',
-  due_date: '2025-01-20',
-  post_code: '2000',
-  parent_experience: 0
+  email: 'rubyonrails@example.com',
+  password: '4760dda2b293b978',
+  first_name: 'Ruby',
+  last_name: 'Railson',
+  nickname: 'RubyOnRails',
+  bio: 'I have a 2 year old daughter and a 4 year old son. My hobbies are surfing and yoga. Every morning I take a walk along the beach with my children.',
+  due_date: '2022-11-29',
+  post_code: '3121',
+  parent_experience: 4
 )
 file = URI.open('https://randomuser.me/api/portraits/women/87.jpg')
 user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
 user.save!
+richmond_group.users << user
 
 puts 'All done!'
