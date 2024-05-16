@@ -1,6 +1,6 @@
 <div class="dashboard-lhs-all">
   <h2 class="two-color-sentence">together<span class="nest-purple">nest</span></h2>
-  <p class="sml-dashboard-title-purple"><%= @group.name.downcase %> / autumn 2024 bubs</p>
+  <p class="sml-dashboard-title-purple"><%= @group.name.downcase%> / <%= @group.due_date %> bubs </p>
 
   <div class="dashboard-row">
     <div class="group-msg-workaround" data-controller="group-subscription" data-group-subscription-group-id-value="<%= @group.id %>" data-group-subscription-current-user-id-value="<%= current_user.id %>">

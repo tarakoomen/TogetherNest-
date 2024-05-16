@@ -78,12 +78,11 @@ user_bios = [
 puts 'Creating parent community groups...'
 # Parent Community Groups
 
-sydney_group = Group.create(name: 'Sydney parent group', group_type: 'parent community', post_code: 2000)
-melbourne_group = Group.create(name: 'Melbourne parent group', group_type: 'parent community', post_code: 3000)
-brisbane_group = Group.create(name: 'Brisbane parent group', group_type: 'parent community', post_code: 4000)
-melbourne_south_east_group = Group.create(name: 'Melbourne southeast group', group_type: 'parent community', post_code: 3162)
-melbourne_north_west_group = Group.create(name: 'Melbourne northwest group', group_type: 'parent community', post_code: 3043)
-
+sydney_group = Group.create(name: 'Sydney parent group', group_type: 'parent community', post_code: 2000, due_date: "autumn 2024")
+melbourne_group = Group.create(name: 'Melbourne parent group', group_type: 'parent community', post_code: 3000, due_date: "autumn 2024")
+brisbane_group = Group.create(name: 'Brisbane parent group', group_type: 'parent community', post_code: 4000, due_date: "autumn 2024")
+melbourne_south_east_group = Group.create(name: 'Melbourne southeast group', group_type: 'parent community', post_code: 3162, due_date: "winter 2024")
+melbourne_north_west_group = Group.create(name: 'Melbourne northwest group', group_type: 'parent community', post_code: 3043, due_date: "summer 2022")
 
 puts 'Creating private messaging groups...'
 # Private Messaging Groups

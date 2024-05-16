@@ -12,6 +12,9 @@
       <%= f.input :post_code, label: "The postcode for your community's area",
                   as: :string,
                   required: true %>
+      <%= f.input :due_date, label: "The season and year the babies of this community are expected to be born",
+                  as: :string,
+                  required: true %>
     </div>
     <div class="form-actions">
       <%= f.button :submit, "submit" %>
