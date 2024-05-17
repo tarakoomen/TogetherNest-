@@ -11,10 +11,10 @@
             <%= cl_image_tag mentor_user.photo.key, class: "avatar-large", alt: "user photo" %>
             <h2><%= mentor_user.first_name %></h2>
             <p><%= mentor_user.bio %></p>
-            <p>postcode: <%= mentor_user.post_code %></p>
-           <div class="btn">
-             <%= button_to "Select", mentorship_path(mentor_id: mentor_user.id) %>
-           </div>
+            <p class="p-postcode">postcode: <%= mentor_user.post_code %></p>
+            <div class="btn">
+              <%= button_to "Select", mentorship_path(mentor_id: mentor_user.id) %>
+            </div>
           </div>
           <% end %>
       </div>
