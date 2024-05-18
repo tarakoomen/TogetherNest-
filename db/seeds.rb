@@ -83,6 +83,7 @@ melbourne_group = Group.create(name: 'Melbourne parent group', group_type: 'pare
 brisbane_group = Group.create(name: 'Brisbane parent group', group_type: 'parent community', post_code: 4000, due_date: "autumn 2024")
 south_yarra_group = Group.create(name: 'Sth Yarra parent group', group_type: 'parent community', post_code: 3141, due_date: "winter 2024")
 richmond_group = Group.create(name: 'Richmond parent group', group_type: 'parent community', post_code: 3121, due_date: "summer 2022")
+prahran_group = Group.create(name: 'Prahran parent group', group_type: 'parent community', post_code: 3141, due_date: "summer 2022")
 
 puts 'Creating private messaging groups...'
 # Private Messaging Groups
@@ -114,7 +115,7 @@ user = User.new(
 file = URI.open('https://randomuser.me/api/portraits/women/73.jpg')
 user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
 user.save!
-richmond_group.users << user
+prahran_group.users << user
 
 user = User.new(
   email: 'vojislava.majstorovic@example.com',
@@ -148,7 +149,7 @@ user = User.new(
 file = URI.open('https://randomuser.me/api/portraits/women/2.jpg')
 user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
 user.save!
-richmond_group.users << user
+prahran_group.users << user
 
 user = User.new(
   email: 'bella.stewart@example.com',
@@ -1019,12 +1020,13 @@ user = User.new(
   nickname: 'heavycat911',
   bio: 'Fashion lover. Foodie. Traveler.',
   due_date: '2024-08-30',
-  post_code: '2030',
+  post_code: '3141',
   parent_experience: 0
 )
 file = URI.open('https://randomuser.me/api/portraits/women/19.jpg')
 user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
 user.save!
+south_yarra_group.users << user
 
 user = User.new(
   email: 'rubyonrails@example.com',
@@ -1040,6 +1042,6 @@ user = User.new(
 file = URI.open('https://randomuser.me/api/portraits/women/87.jpg')
 user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
 user.save!
-richmond_group.users << user
+prahran_group.users << user
 
 puts 'All done!'
