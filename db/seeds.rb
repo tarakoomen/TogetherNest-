@@ -115,7 +115,7 @@ user = User.new(
 file = URI.open('https://randomuser.me/api/portraits/women/73.jpg')
 user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
 user.save!
-prahran_group.users << user
+richmond_group.users << user
 
 user = User.new(
   email: 'vojislava.majstorovic@example.com',
@@ -142,7 +142,7 @@ user = User.new(
   nickname: 'smallladybug208',
   bio: "I'm a single mum with 2 kids. I raise them the Montessori way. We like doing bush walks.",
   due_date: '2025-03-19',
-  post_code: '3121',
+  post_code: '3141',
   parent_experience: 7,
   is_mentor: true
 )
@@ -159,14 +159,14 @@ user = User.new(
   nickname: 'bigtiger457',
   bio: "I'm a working mum with a 2 year old son. My partner and I use gentle parenting.",
   due_date: '2024-05-30',
-  post_code: '3121',
+  post_code: '3141',
   parent_experience: 3,
   is_mentor: true
 )
 file = URI.open('https://randomuser.me/api/portraits/women/68.jpg')
 user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
 user.save!
-richmond_group.users << user
+prahran_group.users << user
 
 user = User.new(
   email: 'thea.rasmussen@example.com',
