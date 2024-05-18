@@ -83,7 +83,7 @@ melbourne_group = Group.create(name: 'Melbourne parent group', group_type: 'pare
 brisbane_group = Group.create(name: 'Brisbane parent group', group_type: 'parent community', post_code: 4000, due_date: "autumn 2024")
 south_yarra_group = Group.create(name: 'Sth Yarra parent group', group_type: 'parent community', post_code: 3141, due_date: "winter 2024")
 richmond_group = Group.create(name: 'Richmond parent group', group_type: 'parent community', post_code: 3121, due_date: "summer 2022")
-prahran_group = Group.create(name: 'Prahran parent group', group_type: 'parent community', post_code: 3141, due_date: "summer 2022")
+prahran_group = Group.create(name: 'Prahran parent group', group_type: 'parent community', post_code: 3181, due_date: "summer 2022")
 
 puts 'Creating private messaging groups...'
 # Private Messaging Groups
