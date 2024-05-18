@@ -990,12 +990,13 @@ user = User.new(
   nickname: 'beautifulduck998',
   bio: 'Movie buff. Pizza lover. Cat person.',
   due_date: '2024-09-23',
-  post_code: '2023',
+  post_code: '3141',
   parent_experience: 0
 )
 file = URI.open('https://randomuser.me/api/portraits/women/88.jpg')
 user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
 user.save!
+south_yarra_group.users << user
 
 user = User.new(
   email: 'ida.ramsoy@example.com',
@@ -1005,12 +1006,13 @@ user = User.new(
   nickname: 'organicbutterfly786',
   bio: 'Art lover. Nature enthusiast. Coffee addict.',
   due_date: '2024-11-06',
-  post_code: '2000',
+  post_code: '3141',
   parent_experience: 0
 )
 file = URI.open('https://randomuser.me/api/portraits/women/62.jpg')
 user.photo.attach(io: file, filename: "user.png", content_type: "image/png")
 user.save!
+south_yarra_group.users << user
 
 user = User.new(
   email: 'carolina.luhrs@example.com',
